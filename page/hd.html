@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>ExceedFlat</title>
+		<meta name="viewport" content="width=375, height=667, minimal-ui, user-scalable=no"  >
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+		<meta name="mobileoptimized" content="0" >
+		<meta name="apple-mobile-web-app-capable" content="yes" >
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="format-detection" content="telephone=no">
+
+		<meta name="msapplication-task" content="http://jsonic.net/img/logo_spark.png" >
+		<meta name="msapplication-TileImage" content="http://jsonic.net/img/logo_spark.png"/>
+		<link rel="apple-touch-icon" href="http://jsonic.net/img/logo_spark.png" />
+		<link rel="icon" type="image/x-icon" href="../img/app.ico">
+
+		<link rel="stylesheet" type="text/css" href="../css/public.css" />
+		<link rel="stylesheet" type="text/css" href="../css/hd.css" />
+		<link rel="stylesheet" type="text/css" href="../build/build.css" />
+
+		<script type="text/javascript" src="../js/jquery-2.0.0.min.js" ></script>
+		<script type="text/javascript" src='../js/ash.js'></script>
+		<script type="text/javascript" src='../js/tool.js'></script>
+		<script type="text/javascript" src='../js/public.js'></script>
+
+		<script type="text/javascript" src='../build/build.js'></script>
+
+	</head>
+	<body>
+		<div id='app' class='con con_warp'>
+			<transition :name="transitionName">
+				<router-view></router-view>
+			</transition>
+			<nav-tool :router='router'></nav-tool>
+		</div>
+	</body>
+</html>

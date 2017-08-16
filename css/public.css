@@ -1,0 +1,35 @@
+*{margin: 0px; padding: 0px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;outline: none; list-style: none; color: white;}
+html,body{position: relative; height: 100%;overflow:hidden;}
+i{font-style: normal;}
+h1,h2,h3,h4,h5,h6{font-weight: normal;}
+ul{list-style: none;}
+
+body{background: black;}
+
+.con{width: 100%;height: 100%; overflow: hidden; position: absolute; top: 0px; left: 0px;}
+
+.mobile_con{width: 375px; height: 667px; display: block; position: absolute; top: 0px; left: 0px;}
+
+.status_bar{height: 20px; width: 100%;}
+
+.title_bar{position: relative; height: 56px; width: 100%;text-align: center; }
+.title_bar>a{position: absolute; top: 6px; display: block; height: 44px; line-height: 44px; text-align: center; width: 44px; background-position: center; background-repeat: no-repeat; border-radius: 50%;}
+.title_bar>a:first-child{left:12px;}
+.title_bar>a:last-child{right:12px;}
+.title_bar>span{text-align: center; color: white; font-size:16px; height: 56px; line-height: 56px;  vertical-align: top;}
+
+.con_flex_column{ display: -webkit-flex; -webkit-flex-flow: column;}
+.con_flex_row{ display: -webkit-flex; -webkit-flex-flow: row;}
+.flex_none{-webkit-flex:none;}
+.flex_1{-webkit-flex:1;}
+
+.ENABLESCROLL{-webkit-overflow-scrolling: touch}
+
+.z100{z-index: 100;}
+.z200{z-index: 200;}
+
+.spinner{animation: spinner 2s linear 0s infinite;}
+@keyframes spinner{
+from {transform:rotate(0deg);}
+to {transform:rotate(360deg);}
+}

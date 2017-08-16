@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="10px" height="6px" viewBox="0 0 10 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-Copy" transform="translate(-230.000000, -994.000000)">
+            <g id="Tool" transform="translate(0.000000, 969.000000)">
+                <g id="icon" transform="translate(235.000000, 28.000000) scale(-1, -1) rotate(90.000000) translate(-235.000000, -28.000000) translate(229.000000, 22.000000)">
+                    <rect id="bound" x="0" y="0" width="12" height="12"></rect>
+                    <g transform="translate(3.000000, 1.000000)" id="fill" fill="#FFFFFF">
+                        <path d="M0.500700764,9.99959 C0.363700764,9.99959 0.227700764,9.94359 0.128700764,9.83459 C-0.0562992361,9.62859 -0.0392992361,9.31259 0.165700764,9.12759 L4.75270076,4.99959 L0.165700764,0.87159 C-0.0392992361,0.68659 -0.0562992361,0.37059 0.128700764,0.16459 C0.313700764,-0.03941 0.629700764,-0.05641 0.834700764,0.12759 L5.83470076,4.62759 C5.94070076,4.72359 6.00070076,4.85759 6.00070076,4.99959 C6.00070076,5.14159 5.94070076,5.27559 5.83470076,5.37159 L0.834700764,9.87159 C0.739700764,9.95759 0.619700764,9.99959 0.500700764,9.99959" transform="translate(3.000476, 4.999738) scale(-1, 1) translate(-3.000476, -4.999738) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

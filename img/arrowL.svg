@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="9px" height="16px" viewBox="0 0 9 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-Copy" transform="translate(-28.000000, -989.000000)" fill="#FFFFFF">
+            <g id="Tool" transform="translate(0.000000, 969.000000)">
+                <g id="button" transform="translate(12.000000, 6.000000)">
+                    <g id="icon" transform="translate(13.000000, 13.000000)">
+                        <path d="M11.5,16.9999 C11.377,16.9999 11.254,16.9549 11.158,16.8639 L3.158,9.3639 C3.057,9.2699 3,9.1379 3,8.9999 C3,8.8609 3.057,8.7289 3.158,8.6349 L11.158,1.1349 C11.359,0.9469 11.676,0.9569 11.865,1.1579 C12.054,1.3589 12.043,1.6759 11.842,1.8639 L4.231,8.9999 L11.842,16.1349 C12.043,16.3239 12.054,16.6409 11.865,16.8419 C11.766,16.9459 11.633,16.9999 11.5,16.9999" id="Fill-1"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

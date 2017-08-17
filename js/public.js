@@ -142,9 +142,6 @@ Nav.prototype = {
         this.Hash = hash;
         this.Len = hash.length;
         this.Index = hash.indexOf(location.hash);
-        if(this.Index===-1){
-            this.go(0);
-        }
     },
     _initSync:function(){
     	var me = this;
@@ -184,6 +181,10 @@ Nav.prototype = {
 
         if(/mobile/i.test(navigator.userAgent)){
         	me.show();
+        }else{
+        	if(this.Index===-1){
+            	this.go(0);
+        	}
         }
 
         WIN.bind('keyup',function(e){

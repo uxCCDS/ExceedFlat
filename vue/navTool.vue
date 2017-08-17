@@ -1,9 +1,9 @@
 <template>
 	<div class='con_nav con_flex_row' id='con_nav' style='display: none'>
 		<a class='flex_none'></a>
-		<div class='flex_1'>Title<i></i></div>
+		<div class='flex_1'><span>{{ ppts[0].path.slice(1) }}</span><i></i></div>
 		<ul class='con_nav_sub' style='display: none'>
-			<li v-for='item in ppts'><a :href="'#'+item.path">{{ item.path.slice(1) }}</a></li>
+			<li v-for='(item, index) in ppts'><a  v-on:click="go(index)" >{{ item.path.slice(1) }}</a></li>
 		</ul>				
 		<a class='flex_none'></a>
 	</div>
@@ -29,9 +29,12 @@ export default {
     methods:{
         init:function(){
             if(!this.Inited){
-                new MNav(this.ppts);
+                this.Nav = new MNav(this.ppts);
                 this.Inited= true;
             }
+        },
+        go:function(idx){
+            this.Nav.go(idx);
         }
     },
     computed:{

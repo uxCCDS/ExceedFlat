@@ -16,31 +16,24 @@
 		<link rel="icon" type="image/x-icon" href="../img/app.ico">
 
 		<link rel="stylesheet" type="text/css" href="../css/public.css" />
-		<link rel="stylesheet" type="text/css" href="../css/hd.css" />
+		<link rel="stylesheet" type="text/css" href="../css/mobile.css" />
 		<link rel="stylesheet" type="text/css" href="../build/build.css" />
 
 		<script type="text/javascript" src="../js/jquery-2.0.0.min.js" ></script>
+		<script type="text/javascript" src="../js/firebase.js" ></script>
 		<script type="text/javascript" src='../js/ash.js'></script>
 		<script type="text/javascript" src='../js/tool.js'></script>
 		<script type="text/javascript" src='../js/public.js'></script>
-		<script type="text/javascript" src='../js/fix.js'></script>
 
 		<script type="text/javascript" src='../build/build.js'></script>
 
 	</head>
 	<body>
-		<div id='app' class='mobile_con con'>
+		<div id='app' class='con con_warp'>
 			<transition :name="transitionName">
 				<router-view></router-view>
 			</transition>
-			<div class='con_nav con_flex_row' id='con_nav' style='display: none'>
-				<a class='flex_none'></a>
-				<div class='flex_1'>Title<i></i></div>
-				<ul class='con_nav_sub' style='display: none'>
-					<li v-for='item in ppts'><a :href="'#'+item.path">{{ item.path.slice(1) }}</a></li>
-				</ul>				
-				<a class='flex_none'></a>
-			</div>
+			<nav-tool :router='router'></nav-tool>
 		</div>
 	</body>
 </html>

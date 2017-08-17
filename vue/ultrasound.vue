@@ -1,6 +1,11 @@
 <template>
     <div class='con'>
-    ultrasound
+        <div class='con con_hd'>
+            Ultrasound
+        </div>
+        <div class='con con_mobile'>
+            Desc Ultrasound
+        </div>
     </div>
 </template>
 

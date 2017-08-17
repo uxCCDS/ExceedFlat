@@ -1,6 +1,11 @@
 <template>
     <div class='con'>
-    SpeechRecognition
+        <div class='con con_hd'>
+            Speech Recognition
+        </div>
+        <div class='con con_mobile'>
+            Desc Speech Recognition
+        </div>
     </div>
 </template>
 

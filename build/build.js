@@ -12846,6 +12846,11 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 exports.default = {
@@ -12907,9 +12912,12 @@ exports.default = {
     methods: {
         init: function init() {
             if (!this.Inited) {
-                new MNav(this.ppts);
+                this.Nav = new MNav(this.ppts);
                 this.Inited = true;
             }
+        },
+        go: function go(idx) {
+            this.Nav.go(idx);
         }
     },
     computed: {},
@@ -12930,6 +12938,11 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+//
+//
+//
+//
+//
 //
 //
 //
@@ -12965,6 +12978,11 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+//
+//
+//
+//
+//
 //
 //
 //
@@ -13019,10 +13037,16 @@ exports.default = {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "con"
-  }, [_vm._v("\nMusic\n")])
-},staticRenderFns: []}
+  }, [_c('div', {
+    staticClass: "con con_hd"
+  }, [_vm._v("\n        Music\n    ")]), _vm._v(" "), _c('div', {
+    staticClass: "con con_mobile"
+  }, [_vm._v("\n        Desc Music\n    ")])])
+}]}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
@@ -13046,25 +13070,25 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('a', {
     staticClass: "flex_none"
-  }), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('ul', {
+  }), _vm._v(" "), _c('div', {
+    staticClass: "flex_1"
+  }, [_c('span', [_vm._v(_vm._s(_vm.ppts[0].path.slice(1)))]), _c('i')]), _vm._v(" "), _c('ul', {
     staticClass: "con_nav_sub",
     staticStyle: {
       "display": "none"
     }
-  }, _vm._l((_vm.ppts), function(item) {
+  }, _vm._l((_vm.ppts), function(item, index) {
     return _c('li', [_c('a', {
-      attrs: {
-        "href": '#' + item.path
+      on: {
+        "click": function($event) {
+          _vm.go(index)
+        }
       }
     }, [_vm._v(_vm._s(item.path.slice(1)))])])
   })), _vm._v(" "), _c('a', {
     staticClass: "flex_none"
   })])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "flex_1"
-  }, [_vm._v("Title"), _c('i')])
-}]}
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
@@ -13078,10 +13102,16 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "con"
-  }, [_vm._v("\nultrasound\n")])
-},staticRenderFns: []}
+  }, [_c('div', {
+    staticClass: "con con_hd"
+  }, [_vm._v("\n        Ultrasound\n    ")]), _vm._v(" "), _c('div', {
+    staticClass: "con con_mobile"
+  }, [_vm._v("\n        Desc Ultrasound\n    ")])])
+}]}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
@@ -13095,10 +13125,16 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "con"
-  }, [_vm._v("\nSpeechRecognition\n")])
-},staticRenderFns: []}
+  }, [_c('div', {
+    staticClass: "con con_hd"
+  }, [_vm._v("\n        Speech Recognition\n    ")]), _vm._v(" "), _c('div', {
+    staticClass: "con con_mobile"
+  }, [_vm._v("\n        Desc Speech Recognition\n    ")])])
+}]}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()

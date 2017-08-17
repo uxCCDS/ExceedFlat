@@ -8,8 +8,6 @@ body{background: black;}
 
 .con{width: 100%;height: 100%; overflow: hidden; position: absolute; top: 0px; left: 0px;}
 
-.mobile_con{width: 375px; height: 667px; display: block; position: absolute; top: 0px; left: 0px;}
-
 .status_bar{height: 20px; width: 100%;}
 
 .title_bar{position: relative; height: 56px; width: 100%;text-align: center; }
@@ -23,10 +21,27 @@ body{background: black;}
 .flex_none{-webkit-flex:none;}
 .flex_1{-webkit-flex:1;}
 
+.con_nav{width: 375px; height: 56px; line-height: 56px; position: absolute; background: rgba(255,255,255,0.15); border-radius: 5px;}
+.con_nav>a{display:block;width: 56px; height: 56px; line-height: 56px; background-position: center; background-repeat: no-repeat; cursor: pointer; }
+.con_nav>a:first-child{background-image:url('../img/arrowL.svg'); margin-left: 12px;}
+.con_nav>a:last-child{background-image:url('../img/arrowR.svg'); margin-right: 12px;}
+.con_nav>div{height: 56px; text-align: center;cursor: pointer;}
+.con_nav>div i{ display: inline-block; height: 56px; width: 20px; background: url('../img/arrowD.svg') no-repeat center; margin-left: 12px; vertical-align: top;}
+
+.con_nav_sub{position: absolute;  width: 100%; text-align: center;background: rgba(255,255,255,0.15); border-radius: 5px; max-height: 410px; overflow-x: hidden;}
+.con_nav_sub li{height: 40px;line-height: 40px;  width: 100%; border-bottom: 1px solid rgba(255,255,255,0.05);}
+.con_nav_sub a{ display: block; text-align: center;height: 40px;line-height: 40px;  width: 100%; cursor: pointer; text-decoration: none;}
+.con_nav_sub li:last-child{border-bottom: none;}
+
+
+
 .ENABLESCROLL{-webkit-overflow-scrolling: touch}
 
 .z100{z-index: 100;}
 .z200{z-index: 200;}
+
+.an_fade-enter-active, .an_fade-leave-active { transition: opacity .5s linear 0s;}
+.an_fade-enter, .an_fade-leave-to{ opacity: 0;}
 
 .spinner{animation: spinner 2s linear 0s infinite;}
 @keyframes spinner{

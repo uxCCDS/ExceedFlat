@@ -1,6 +1,11 @@
 <template>
     <div class='con'>
-    Music
+        <div class='con con_hd'>
+            Music
+        </div>
+        <div class='con con_mobile'>
+            Desc Music
+        </div>
     </div>
 </template>
 

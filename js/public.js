@@ -118,6 +118,7 @@ var Nav = function(routeData){
     this.BtnFold = this.Con.find('.flex_1');
     this.SubCon = this.Con.find('.con_nav_sub');
     this.Title = this.BtnFold.find('SPAN');
+    this.BODY= $('#app')[0];
 
     var btns = this.Con.find('>A');
 
@@ -202,6 +203,11 @@ Nav.prototype = {
                         me.show();
                     }
                     break;
+                case 48:
+                	if(me.BODY.webkitRequestFullScreen){
+                		me.BODY.webkitRequestFullScreen();	
+                	}                		
+                	break;
             }
         });
 

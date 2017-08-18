@@ -3,4 +3,6 @@
 .con_mobile{width: 375px; height: 591px; display: block; position: absolute; top: 76px; left: 0px;}
 
 .con_nav{ top: 20px; left: 0px;}
-.con_nav_sub {top: 56px; left: 0px;}
+.con_nav_sub {top: 56px; left: 0px; background-color: #552668;}
+
+.brand{display: none;}

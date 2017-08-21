@@ -1,10 +1,12 @@
 <template>
     <div class='con'>
         <div class='con con_hd'>
-            Speech Recognition
+            <div class='text_title center'>
+                <h1>The essence of sound</h1>              
+            </div>
         </div>
         <div class='con con_mobile'>
-            Desc Speech Recognition
+            <p>Have you ever thought the essense behind these technology?</p>
         </div>
     </div>
 </template>

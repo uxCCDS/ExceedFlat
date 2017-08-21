@@ -360,23 +360,23 @@ process.umask = function() { return 0; };
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(13)
+  __webpack_require__(15)
 }
 var Component = __webpack_require__(0)(
   /* script */
   __webpack_require__(9),
   /* template */
-  __webpack_require__(17),
+  __webpack_require__(19),
   /* styles */
   injectStyle,
   /* scopeId */
-  "data-v-31156c70",
+  "data-v-5a01f825",
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Applications/XAMPP/xamppfiles/htdocs/github/ExceedFlat/vue/music.vue"
+Component.options.__file = "/Applications/XAMPP/xamppfiles/htdocs/github/ExceedFlat/vue/decorateSound.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] music.vue: functional components are not supported with templates, they should use render functions.")}
+if (Component.options.functional) {console.error("[vue-loader] decorateSound.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -385,9 +385,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-31156c70", Component.options)
+    hotAPI.createRecord("data-v-5a01f825", Component.options)
   } else {
-    hotAPI.reload("data-v-31156c70", Component.options)
+    hotAPI.reload("data-v-5a01f825", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -411,6 +411,50 @@ var Component = __webpack_require__(0)(
   __webpack_require__(10),
   /* template */
   __webpack_require__(18),
+  /* styles */
+  injectStyle,
+  /* scopeId */
+  "data-v-4f52a933",
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/Applications/XAMPP/xamppfiles/htdocs/github/ExceedFlat/vue/essence.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] essence.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-4f52a933", Component.options)
+  } else {
+    hotAPI.reload("data-v-4f52a933", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(16)
+}
+var Component = __webpack_require__(0)(
+  /* script */
+  __webpack_require__(11),
+  /* template */
+  __webpack_require__(20),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -442,73 +486,29 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(16)
-}
-var Component = __webpack_require__(0)(
-  /* script */
-  __webpack_require__(11),
-  /* template */
-  __webpack_require__(20),
-  /* styles */
-  injectStyle,
-  /* scopeId */
-  "data-v-dc014ed0",
-  /* moduleIdentifier (server only) */
-  null
-)
-Component.options.__file = "/Applications/XAMPP/xamppfiles/htdocs/github/ExceedFlat/vue/speechRecognition.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] speechRecognition.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-dc014ed0", Component.options)
-  } else {
-    hotAPI.reload("data-v-dc014ed0", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(15)
+  __webpack_require__(13)
 }
 var Component = __webpack_require__(0)(
   /* script */
   __webpack_require__(12),
   /* template */
-  __webpack_require__(19),
+  __webpack_require__(17),
   /* styles */
   injectStyle,
   /* scopeId */
-  "data-v-c71a3d60",
+  "data-v-2a5fb54d",
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Applications/XAMPP/xamppfiles/htdocs/github/ExceedFlat/vue/ultrasound.vue"
+Component.options.__file = "/Applications/XAMPP/xamppfiles/htdocs/github/ExceedFlat/vue/rockUp.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] ultrasound.vue: functional components are not supported with templates, they should use render functions.")}
+if (Component.options.functional) {console.error("[vue-loader] rockUp.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -517,9 +517,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-c71a3d60", Component.options)
+    hotAPI.createRecord("data-v-2a5fb54d", Component.options)
   } else {
-    hotAPI.reload("data-v-c71a3d60", Component.options)
+    hotAPI.reload("data-v-2a5fb54d", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -12756,21 +12756,21 @@ var _vueRouter = __webpack_require__(6);
 
 var _vueRouter2 = _interopRequireDefault(_vueRouter);
 
-var _navTool = __webpack_require__(3);
+var _navTool = __webpack_require__(4);
 
 var _navTool2 = _interopRequireDefault(_navTool);
 
-var _music = __webpack_require__(2);
+var _rockUp = __webpack_require__(5);
 
-var _music2 = _interopRequireDefault(_music);
+var _rockUp2 = _interopRequireDefault(_rockUp);
 
-var _speechRecognition = __webpack_require__(4);
+var _decorateSound = __webpack_require__(2);
 
-var _speechRecognition2 = _interopRequireDefault(_speechRecognition);
+var _decorateSound2 = _interopRequireDefault(_decorateSound);
 
-var _ultrasound = __webpack_require__(5);
+var _essence = __webpack_require__(3);
 
-var _ultrasound2 = _interopRequireDefault(_ultrasound);
+var _essence2 = _interopRequireDefault(_essence);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12795,11 +12795,11 @@ for(var i=0,l=routeArr.length;i<l;i++){
 
 var router = new _vueRouter2.default({
     routes: [{
-        path: '/music', component: _music2.default
+        path: '/rockUp', component: _rockUp2.default
     }, {
-        path: '/speechRecognition', component: _speechRecognition2.default
+        path: '/decorateSound', component: _decorateSound2.default
     }, {
-        path: '/ultrasound', component: _ultrasound2.default
+        path: '/essence', component: _essence2.default
     }]
 });
 
@@ -12810,16 +12810,33 @@ var vm = new _vue2.default({
     data: function data() {
         console.log(router);
         return {
-            transitionName: 'an_fade',
+            transitionName: 'an_slide_left',
             router: router.options.routes
         };
     },
     components: {
         'nav-tool': _navTool2.default
     },
+    methods: {
+        getIndex: function getIndex(obj) {
+            var l = this.router.length,
+                i = l - 1;
+            for (; i >= 0; i--) {
+                if (this.router[i].path === obj.path) {
+                    return i;
+                }
+            }
+            return i;
+        }
+    },
     router: router,
     watch: {
         '$route': function $route(to, from) {
+            if (this.getIndex(to) < this.getIndex(from)) {
+                this.transitionName = 'an_slide_right';
+            } else {
+                this.transitionName = 'an_slide_left';
+            }
             //console.log(toLevel,fromLevel,this.transitionName);
         }
     }
@@ -12827,7 +12844,7 @@ var vm = new _vue2.default({
 
 window.onload = function () {
     vm.$mount('#app');
-    router.push('/music');
+    router.push('/rockUp');
 };
 
 /***/ }),
@@ -12840,6 +12857,8 @@ window.onload = function () {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+//
+//
 //
 //
 //
@@ -12872,6 +12891,48 @@ exports.default = {
 
 /***/ }),
 /* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+exports.default = {
+    data: function data() {
+        //var id = this.$route.params.id;
+        return {};
+    },
+
+    methods: {
+        init: function init() {}
+    },
+    computed: {},
+    mounted: function mounted() {
+        this.init();
+        //this.initAsh();
+        //console.log(this.$el);
+    }
+};
+
+/***/ }),
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12929,46 +12990,6 @@ exports.default = {
 };
 
 /***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-exports.default = {
-    data: function data() {
-        //var id = this.$route.params.id;
-        return {};
-    },
-
-    methods: {
-        init: function init() {}
-    },
-    computed: {},
-    mounted: function mounted() {
-        this.init();
-        //this.initAsh();
-        //console.log(this.$el);
-    }
-};
-
-/***/ }),
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12978,6 +12999,9 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+//
+//
+//
 //
 //
 //
@@ -13043,20 +13067,72 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "con"
   }, [_c('div', {
     staticClass: "con con_hd"
-  }, [_vm._v("\n        Music\n    ")]), _vm._v(" "), _c('div', {
+  }, [_c('div', {
+    staticClass: "text_title center"
+  }, [_c('h1', [_vm._v("Rock Up!")]), _vm._v(" "), _c('h2', [_vm._v("The Interaction of sound")])])]), _vm._v(" "), _c('div', {
     staticClass: "con con_mobile"
-  }, [_vm._v("\n        Desc Music\n    ")])])
+  }, [_c('p', [_vm._v("Thanks for Fiona to introduce the latest technology to us. It helps us to open the door of future.")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-31156c70", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-2a5fb54d", module.exports)
   }
 }
 
 /***/ }),
 /* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "con"
+  }, [_c('div', {
+    staticClass: "con con_hd"
+  }, [_c('div', {
+    staticClass: "text_title center"
+  }, [_c('h1', [_vm._v("The essence of sound")])])]), _vm._v(" "), _c('div', {
+    staticClass: "con con_mobile"
+  }, [_c('p', [_vm._v("Have you ever thought the essense behind these technology?")])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-4f52a933", module.exports)
+  }
+}
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "con"
+  }, [_c('div', {
+    staticClass: "con con_hd"
+  }, [_c('div', {
+    staticClass: "text_title center"
+  }, [_c('h1', [_vm._v("Decorate Sound")])])]), _vm._v(" "), _c('div', {
+    staticClass: "con con_mobile"
+  }, [_c('p', [_vm._v("I believe you guys here are artists. ")])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-5a01f825", module.exports)
+  }
+}
+
+/***/ }),
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -13094,52 +13170,6 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
      require("vue-hot-reload-api").rerender("data-v-7ecf573e", module.exports)
-  }
-}
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "con"
-  }, [_c('div', {
-    staticClass: "con con_hd"
-  }, [_vm._v("\n        Ultrasound\n    ")]), _vm._v(" "), _c('div', {
-    staticClass: "con con_mobile"
-  }, [_vm._v("\n        Desc Ultrasound\n    ")])])
-}]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-c71a3d60", module.exports)
-  }
-}
-
-/***/ }),
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "con"
-  }, [_c('div', {
-    staticClass: "con con_hd"
-  }, [_vm._v("\n        Speech Recognition\n    ")]), _vm._v(" "), _c('div', {
-    staticClass: "con con_mobile"
-  }, [_vm._v("\n        Desc Speech Recognition\n    ")])])
-}]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-dc014ed0", module.exports)
   }
 }
 

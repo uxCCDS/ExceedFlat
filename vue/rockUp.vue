@@ -1,10 +1,13 @@
 <template>
     <div class='con'>
         <div class='con con_hd'>
-            Ultrasound
+            <div class='text_title center'>
+                <h1>Rock Up!</h1>
+                <h2>The Interaction of sound</h2>                
+            </div>
         </div>
         <div class='con con_mobile'>
-            Desc Ultrasound
+            <p>Thanks for Fiona to introduce the latest technology to us. It helps us to open the door of future.</p>
         </div>
     </div>
 </template>

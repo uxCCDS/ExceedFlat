@@ -1,6 +1,7 @@
 .con_hd{display: none;}
 /* 667 - 56- 20 = 591*/
-.con_mobile{width: 375px; height: 591px; display: block; position: absolute; top: 76px; left: 0px;}
+.con_mobile{width: 375px; height: 591px; display: block; position: absolute; top: 76px; left: 0px; overflow-x: hidden;}
+.con_mobile p{margin:10px 0 0 20px; line-height: 24px; font-size: 16px; width:335px; word-wrap:break-word; }
 
 .con_nav{ top: 20px; left: 0px;}
 .con_nav_sub {top: 56px; left: 0px; background-color: #552668;}

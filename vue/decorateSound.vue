@@ -1,10 +1,12 @@
 <template>
     <div class='con'>
         <div class='con con_hd'>
-            Music
+            <div class='text_title center'>
+                <h1>Decorate Sound</h1>              
+            </div>
         </div>
         <div class='con con_mobile'>
-            Desc Music
+            <p>I believe you guys here are artists. </p>
         </div>
     </div>
 </template>
@@ -37,5 +39,3 @@ export default {
 <style scoped>
 
 </style>
-
-

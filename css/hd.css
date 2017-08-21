@@ -4,3 +4,7 @@
 .con_nav_sub {bottom: 60px; left: 0px;}
 
 .brand{display: block; width: 218px; height: 52px; position: absolute; bottom: 20px; right: 40px; background: url('../img/brand.svg') no-repeat center;}
+
+.text_title{text-align: center; width: 100%;}
+.text_title h1{font-size: 100px;}
+.text_title h2{font-size: 80px; margin-top: 60px;}

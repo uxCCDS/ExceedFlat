@@ -2,9 +2,9 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import NavTool from '../vue/navTool.vue';
-import Music from '../vue/music.vue';
-import SpeechRecognition from '../vue/speechRecognition.vue';
-import Ultrasound from '../vue/ultrasound.vue';
+import RockUp from '../vue/rockUp.vue';
+import DecorateSound from '../vue/decorateSound.vue';
+import Essence from '../vue/essence.vue';
 
 Vue.use(VueRouter);
 
@@ -27,11 +27,11 @@ for(var i=0,l=routeArr.length;i<l;i++){
 
 const router = new VueRouter({
   	routes:[{ 
-        path: '/music', component: Music
+        path: '/rockUp', component: RockUp
     },{
-        path:'/speechRecognition',component: SpeechRecognition
+        path:'/decorateSound',component: DecorateSound
     },{
-        path:'/ultrasound',component: Ultrasound
+        path:'/essence',component: Essence
     }]
 });
 
@@ -42,16 +42,33 @@ var vm = new Vue({
     data:function(){
         console.log(router);
         return {
-            transitionName:'an_fade',
+            transitionName:'an_slide_left',
             router:router.options.routes
         }
     },
     components:{
         'nav-tool':NavTool
     },
+    methods:{
+        getIndex:function(obj){
+            var l = this.router.length,
+                i= l-1;
+            for(;i>=0;i--){
+                if(this.router[i].path === obj.path ){
+                    return i;
+                }
+            }
+            return i;
+        }
+    },
   	router:router,
     watch:{
         '$route':function(to,from) {
+            if(this.getIndex(to) < this.getIndex(from)){
+                this.transitionName = 'an_slide_right';
+            }else{
+                this.transitionName = 'an_slide_left';
+            }
             //console.log(toLevel,fromLevel,this.transitionName);
         }
     }
@@ -59,5 +76,5 @@ var vm = new Vue({
 
 window.onload = function() {
 	vm.$mount('#app');
-	router.push('/music');
+	router.push('/rockUp');
 };

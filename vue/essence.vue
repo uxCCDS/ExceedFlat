@@ -2,7 +2,7 @@
     <div class='con'>
         <div class='con con_hd'>
             <div class='text_title center'>
-                <h1>The essence of sound</h1>              
+                <h1>Essence</h1>              
             </div>
         </div>
         <div class='con con_mobile'>

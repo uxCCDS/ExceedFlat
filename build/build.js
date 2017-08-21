@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -360,13 +360,13 @@ process.umask = function() { return 0; };
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(15)
+  __webpack_require__(17)
 }
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(9),
+  __webpack_require__(10),
   /* template */
-  __webpack_require__(19),
+  __webpack_require__(22),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -404,13 +404,13 @@ module.exports = Component.exports
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(14)
+  __webpack_require__(16)
 }
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(10),
+  __webpack_require__(11),
   /* template */
-  __webpack_require__(18),
+  __webpack_require__(21),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -448,13 +448,13 @@ module.exports = Component.exports
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(16)
+  __webpack_require__(18)
 }
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(11),
+  __webpack_require__(12),
   /* template */
-  __webpack_require__(20),
+  __webpack_require__(23),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -492,13 +492,13 @@ module.exports = Component.exports
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(13)
+  __webpack_require__(15)
 }
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(12),
+  __webpack_require__(13),
   /* template */
-  __webpack_require__(17),
+  __webpack_require__(20),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -531,6 +531,50 @@ module.exports = Component.exports
 
 /***/ }),
 /* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(19)
+}
+var Component = __webpack_require__(0)(
+  /* script */
+  __webpack_require__(14),
+  /* template */
+  __webpack_require__(24),
+  /* styles */
+  injectStyle,
+  /* scopeId */
+  "data-v-dc014ed0",
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/Applications/XAMPP/xamppfiles/htdocs/github/ExceedFlat/vue/speechRecognition.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] speechRecognition.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-dc014ed0", Component.options)
+  } else {
+    hotAPI.reload("data-v-dc014ed0", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3044,7 +3088,7 @@ if (inBrowser && window.Vue) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12739,20 +12783,20 @@ Vue$3.compile = compileToFunctions;
 
 /* harmony default export */ __webpack_exports__["default"] = (Vue$3);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1), __webpack_require__(21)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1), __webpack_require__(25)))
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _vue = __webpack_require__(7);
+var _vue = __webpack_require__(8);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _vueRouter = __webpack_require__(6);
+var _vueRouter = __webpack_require__(7);
 
 var _vueRouter2 = _interopRequireDefault(_vueRouter);
 
@@ -12763,6 +12807,10 @@ var _navTool2 = _interopRequireDefault(_navTool);
 var _rockUp = __webpack_require__(5);
 
 var _rockUp2 = _interopRequireDefault(_rockUp);
+
+var _speechRecognition = __webpack_require__(6);
+
+var _speechRecognition2 = _interopRequireDefault(_speechRecognition);
 
 var _decorateSound = __webpack_require__(2);
 
@@ -12796,6 +12844,8 @@ for(var i=0,l=routeArr.length;i<l;i++){
 var router = new _vueRouter2.default({
     routes: [{
         path: '/rockUp', component: _rockUp2.default
+    }, {
+        path: '/speechRecognition', component: _speechRecognition2.default
     }, {
         path: '/decorateSound', component: _decorateSound2.default
     }, {
@@ -12845,48 +12895,6 @@ var vm = new _vue2.default({
 window.onload = function () {
     vm.$mount('#app');
     router.push('/rockUp');
-};
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-exports.default = {
-    data: function data() {
-        //var id = this.$route.params.id;
-        return {};
-    },
-
-    methods: {
-        init: function init() {}
-    },
-    computed: {},
-    mounted: function mounted() {
-        this.init();
-        //this.initAsh();
-        //console.log(this.$el);
-    }
 };
 
 /***/ }),
@@ -12952,6 +12960,48 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+
+
+exports.default = {
+    data: function data() {
+        //var id = this.$route.params.id;
+        return {};
+    },
+
+    methods: {
+        init: function init() {}
+    },
+    computed: {},
+    mounted: function mounted() {
+        this.init();
+        //this.initAsh();
+        //console.log(this.$el);
+    }
+};
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 exports.default = {
@@ -12990,7 +13040,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13002,6 +13052,114 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+var Note = function Note(str) {
+    this.Dom = document.createElement('SPAN');
+    this.Dom.innerHTML = str;
+};
+Note.prototype = {
+    getAsh: function getAsh(delay, time) {
+        return [{
+            dom: this.Dom,
+            css: [{ top: '0px' }, { top: '-30px' }],
+            time: time,
+            delay: delay
+        }, {
+            dom: this.Dom,
+            css: [{ top: '-30px' }, { top: '0' }],
+            time: time,
+            delay: delay + time
+        }];
+    }
+};
+var Melody = function Melody(dom) {
+    this.Dom = dom;
+    this.Notes = [];
+    this.init();
+};
+Melody.prototype = {
+    init: function init() {
+        var me = this,
+            str = this.Dom.html(),
+            note,
+            arr = [],
+            _a;
+        this.Dom.html('');
+        for (var i = 0, l = str.length; i < l; i++) {
+            note = new Note(str[i]);
+            this.Notes.push(note);
+            this.Dom[0].appendChild(note.Dom);
+            _a = note.getAsh(i * 2, 12);
+            arr.push(_a[0]);
+            arr.push(_a[1]);
+        }
+        this.Ash = new Ash.S(arr, 1, function () {
+            me.Lock = false;
+        });
+
+        this.Dom.bind('click', function () {
+            me.play();
+        });
+    },
+    play: function play() {
+        if (!this.Lock) {
+            this.Lock = true;
+            this.Ash.play();
+        }
+    }
+};
+
+exports.default = {
+    data: function data() {
+        //var id = this.$route.params.id;
+        return {};
+    },
+
+    methods: {
+        init: function init() {
+            if (!this.Inited) {
+                this.Mel = new Melody($('#RockUpSub'));
+                this.Inited = true;
+            }
+        },
+        play: function play() {
+            var me = this;
+            setTimeout(function () {
+                me.Mel.play();
+            }, 500);
+        }
+    },
+    computed: {},
+    mounted: function mounted() {
+        this.init();
+        this.play();
+        //this.initAsh();
+        //console.log(this.$el);
+    }
+};
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 //
 //
 //
@@ -13033,18 +13191,6 @@ exports.default = {
 };
 
 /***/ }),
-/* 13 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
 /* 15 */
 /***/ (function(module, exports) {
 
@@ -13058,6 +13204,24 @@ exports.default = {
 
 /***/ }),
 /* 17 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -13069,7 +13233,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "con con_hd"
   }, [_c('div', {
     staticClass: "text_title center"
-  }, [_c('h1', [_vm._v("Rock Up!")]), _vm._v(" "), _c('h2', [_vm._v("The Interaction of sound")])])]), _vm._v(" "), _c('div', {
+  }, [_c('h1', [_vm._v("Rock Up!")]), _vm._v(" "), _c('h2', {
+    attrs: {
+      "id": "RockUpSub"
+    }
+  }, [_vm._v("The Interaction of sound")])])]), _vm._v(" "), _c('div', {
     staticClass: "con con_mobile"
   }, [_c('p', [_vm._v("Thanks for Fiona to introduce the latest technology to us. It helps us to open the door of future.")])])])
 }]}
@@ -13082,7 +13250,7 @@ if (false) {
 }
 
 /***/ }),
-/* 18 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -13107,7 +13275,7 @@ if (false) {
 }
 
 /***/ }),
-/* 19 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -13132,7 +13300,7 @@ if (false) {
 }
 
 /***/ }),
-/* 20 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -13174,7 +13342,32 @@ if (false) {
 }
 
 /***/ }),
-/* 21 */
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "con"
+  }, [_c('div', {
+    staticClass: "con con_hd"
+  }, [_c('i', {
+    staticClass: "icon_siri center"
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "con con_mobile"
+  }, [_c('p', [_vm._v("What's fisrt App come to your mind after you hear speech recognition?")])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-dc014ed0", module.exports)
+  }
+}
+
+/***/ }),
+/* 25 */
 /***/ (function(module, exports) {
 
 var g;

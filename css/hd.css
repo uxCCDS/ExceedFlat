@@ -8,3 +8,6 @@
 .text_title{text-align: center; width: 100%;}
 .text_title h1{font-size: 100px;}
 .text_title h2{font-size: 80px; margin-top: 60px;}
+.text_title h2 span{font-size: 80px; position: relative;}
+
+.icon_siri{display: block; width: 351px; height: 420px; background: url('../img/icon_siri.png') no-repeat center;}

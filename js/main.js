@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 
 import NavTool from '../vue/navTool.vue';
 import RockUp from '../vue/rockUp.vue';
+import SpeechRecognition from '../vue/speechRecognition.vue';
 import DecorateSound from '../vue/decorateSound.vue';
 import Essence from '../vue/essence.vue';
 
@@ -28,6 +29,8 @@ for(var i=0,l=routeArr.length;i<l;i++){
 const router = new VueRouter({
   	routes:[{ 
         path: '/rockUp', component: RockUp
+    },{ 
+        path: '/speechRecognition', component: SpeechRecognition
     },{
         path:'/decorateSound',component: DecorateSound
     },{

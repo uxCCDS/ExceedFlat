@@ -10,4 +10,11 @@
 .text_title h2{font-size: 80px; margin-top: 60px;}
 .text_title h2 span{font-size: 80px; position: relative;}
 
-.icon_siri{display: block; width: 351px; height: 420px; background: url('../img/icon_siri.png') no-repeat center;}
+.con_siri{width: 1000px; height: 600px;}
+.con_siri h1{position: absolute; top: 10px; left: 100px; text-align: center; display: block; width: 800px; height: 80px; font-size: 64px; overflow:hidden; text-transform: capitalize; }
+.con_siri i{position: absolute; top: 0px; left: 0px; width: 102px; height: 170px;}
+.con_siri i{position: absolute; width: 205px; height: 341px; left: 398px; top: 130px;}
+.con_siri canvas{position: absolute;bottom: 0px; left: 0px; width:1000px; height: 400px; }
+
+.icon_siri{display: block; background: url('../img/icon_siri.png') no-repeat center; background-size: contain;}
+.img_speaker{display: block; width: 600px; height: 300px; background: url('../img/speaker.png') no-repeat center; background-size: contain;}

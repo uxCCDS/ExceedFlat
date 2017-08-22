@@ -30,6 +30,7 @@ export default {
         init:function(){
             if(!this.Inited){
                 this.Nav = new MNav(this.ppts);
+                window.Nav = this.Nav;
                 this.Inited= true;
             }
         },

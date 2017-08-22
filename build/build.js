@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 11);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -360,13 +360,13 @@ process.umask = function() { return 0; };
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(17)
+  __webpack_require__(22)
 }
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(10),
+  __webpack_require__(12),
   /* template */
-  __webpack_require__(22),
+  __webpack_require__(29),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -404,13 +404,13 @@ module.exports = Component.exports
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(16)
+  __webpack_require__(20)
 }
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(11),
+  __webpack_require__(13),
   /* template */
-  __webpack_require__(21),
+  __webpack_require__(27),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -448,13 +448,57 @@ module.exports = Component.exports
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(18)
+  __webpack_require__(23)
 }
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(12),
+  __webpack_require__(14),
   /* template */
-  __webpack_require__(23),
+  __webpack_require__(30),
+  /* styles */
+  injectStyle,
+  /* scopeId */
+  "data-v-6b7a712a",
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/Applications/XAMPP/xamppfiles/htdocs/github/ExceedFlat/vue/guitarSpeakers.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] guitarSpeakers.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-6b7a712a", Component.options)
+  } else {
+    hotAPI.reload("data-v-6b7a712a", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(24)
+}
+var Component = __webpack_require__(0)(
+  /* script */
+  __webpack_require__(15),
+  /* template */
+  __webpack_require__(31),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -486,19 +530,19 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(15)
+  __webpack_require__(19)
 }
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(13),
+  __webpack_require__(16),
   /* template */
-  __webpack_require__(20),
+  __webpack_require__(26),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -530,19 +574,19 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(19)
+  __webpack_require__(25)
 }
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(14),
+  __webpack_require__(17),
   /* template */
-  __webpack_require__(24),
+  __webpack_require__(32),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -574,7 +618,51 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 7 */
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(21)
+}
+var Component = __webpack_require__(0)(
+  /* script */
+  __webpack_require__(18),
+  /* template */
+  __webpack_require__(28),
+  /* styles */
+  injectStyle,
+  /* scopeId */
+  "data-v-539fea68",
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/Applications/XAMPP/xamppfiles/htdocs/github/ExceedFlat/vue/speechRecognitionThinking.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] speechRecognitionThinking.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-539fea68", Component.options)
+  } else {
+    hotAPI.reload("data-v-539fea68", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3088,7 +3176,7 @@ if (inBrowser && window.Vue) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 8 */
+/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12783,38 +12871,46 @@ Vue$3.compile = compileToFunctions;
 
 /* harmony default export */ __webpack_exports__["default"] = (Vue$3);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1), __webpack_require__(25)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1), __webpack_require__(33)))
 
 /***/ }),
-/* 9 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _vue = __webpack_require__(8);
+var _vue = __webpack_require__(10);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _vueRouter = __webpack_require__(7);
+var _vueRouter = __webpack_require__(9);
 
 var _vueRouter2 = _interopRequireDefault(_vueRouter);
 
-var _navTool = __webpack_require__(4);
+var _navTool = __webpack_require__(5);
 
 var _navTool2 = _interopRequireDefault(_navTool);
 
-var _rockUp = __webpack_require__(5);
+var _rockUp = __webpack_require__(6);
 
 var _rockUp2 = _interopRequireDefault(_rockUp);
 
-var _speechRecognition = __webpack_require__(6);
+var _speechRecognition = __webpack_require__(7);
 
 var _speechRecognition2 = _interopRequireDefault(_speechRecognition);
+
+var _speechRecognitionThinking = __webpack_require__(8);
+
+var _speechRecognitionThinking2 = _interopRequireDefault(_speechRecognitionThinking);
 
 var _decorateSound = __webpack_require__(2);
 
 var _decorateSound2 = _interopRequireDefault(_decorateSound);
+
+var _guitarSpeakers = __webpack_require__(4);
+
+var _guitarSpeakers2 = _interopRequireDefault(_guitarSpeakers);
 
 var _essence = __webpack_require__(3);
 
@@ -12847,7 +12943,11 @@ var router = new _vueRouter2.default({
     }, {
         path: '/speechRecognition', component: _speechRecognition2.default
     }, {
+        path: '/speechRecognitionThinking', component: _speechRecognitionThinking2.default
+    }, {
         path: '/decorateSound', component: _decorateSound2.default
+    }, {
+        path: '/guitarSpeakers', component: _guitarSpeakers2.default
     }, {
         path: '/essence', component: _essence2.default
     }]
@@ -12898,91 +12998,131 @@ window.onload = function () {
 };
 
 /***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-exports.default = {
-    data: function data() {
-        //var id = this.$route.params.id;
-        return {};
-    },
-
-    methods: {
-        init: function init() {}
-    },
-    computed: {},
-    mounted: function mounted() {
-        this.init();
-        //this.initAsh();
-        //console.log(this.$el);
-    }
-};
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-exports.default = {
-    data: function data() {
-        //var id = this.$route.params.id;
-        return {};
-    },
-
-    methods: {
-        init: function init() {}
-    },
-    computed: {},
-    mounted: function mounted() {
-        this.init();
-        //this.initAsh();
-        //console.log(this.$el);
-    }
-};
-
-/***/ }),
 /* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+exports.default = {
+    data: function data() {
+        //var id = this.$route.params.id;
+        return {};
+    },
+
+    methods: {
+        init: function init() {}
+    },
+    computed: {},
+    mounted: function mounted() {
+        this.init();
+        //this.initAsh();
+        //console.log(this.$el);
+    }
+};
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+exports.default = {
+    data: function data() {
+        //var id = this.$route.params.id;
+        return {};
+    },
+
+    methods: {
+        init: function init() {}
+    },
+    computed: {},
+    mounted: function mounted() {
+        this.init();
+        //this.initAsh();
+        //console.log(this.$el);
+    }
+};
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+exports.default = {
+    data: function data() {
+        //var id = this.$route.params.id;
+        return {};
+    },
+
+    methods: {
+        init: function init() {}
+    },
+    computed: {},
+    mounted: function mounted() {
+        this.init();
+        //this.initAsh();
+        //console.log(this.$el);
+    }
+};
+
+/***/ }),
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13024,6 +13164,7 @@ exports.default = {
         init: function init() {
             if (!this.Inited) {
                 this.Nav = new MNav(this.ppts);
+                window.Nav = this.Nav;
                 this.Inited = true;
             }
         },
@@ -13040,7 +13181,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 13 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13151,7 +13292,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 14 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13171,11 +13312,194 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
+//
 
+
+var Siri = function Siri(con) {
+    this.Con = con;
+    this.Icon = con.find('I');
+    this.H1 = con.find('H1');
+    this.Canvas = con.find('CANVAS');
+
+    this.Voix = new Jsonic.Voix(undefined, undefined, true);
+
+    this.Lock = false;
+    this.IsOn = false;
+    this.initAsh();
+    this.initWave();
+    this.init();
+};
+Siri.prototype = {
+    initAsh: function initAsh() {
+        var me = this;
+
+        this.Voix.onLog = function (msg) {
+            me.H1.html(msg);
+        };
+
+        this.Voix.bind(['next', 'next slide'], function () {
+            window.Nav && window.Nav.next();
+        });
+
+        this.AshShow = new Ash.S([{
+            dom: me.Canvas,
+            css: [{ display: '', opacity: 0 }, { opacity: 1 }],
+            time: 10,
+            dalay: 10
+        }, {
+            dom: me.H1,
+            css: [{ display: '', opacity: 0, transform: 'scale(0.3)' }, { opacity: 1, transform: 'scale(1)' }],
+            time: 10,
+            dalay: 10
+        }, {
+            dom: me.Icon,
+            css: [{ width: '205px', height: '341px' }, { width: '102px', height: '170px' }],
+            time: 10
+        }, {
+            dom: me.Icon,
+            css: [{ top: '130px' }, { top: '0px' }],
+            time: 20,
+            tween: 'easeIn'
+        }, {
+            dom: me.Icon,
+            css: [{ left: '398px' }, { left: '0px' }],
+            time: 20,
+            dalay: 4,
+            tween: 'easeOut'
+        }], 1, function () {
+            me.Lock = false;
+        });
+        this.AshHide = new Ash.S([{
+            dom: me.Canvas,
+            css: [{ opacity: 1 }, { opacity: 0, display: 'none' }],
+            time: 10
+        }, {
+            dom: me.H1,
+            css: [{ opacity: 1, transform: 'scale(1)' }, { opacity: 0, display: 'none', transform: 'scale(0.3)' }],
+            time: 10
+        }, {
+            dom: me.Icon,
+            css: [{ width: '102px', height: '170px' }, { width: '205px', height: '341px' }],
+            time: 10
+        }, {
+            dom: me.Icon,
+            css: [{ top: '0px' }, { top: '130px' }],
+            time: 20,
+            dalay: 4,
+            tween: 'easeOut'
+        }, {
+            dom: me.Icon,
+            css: [{ left: '0px' }, { left: '398px' }],
+            time: 20,
+            tween: 'easeIn'
+        }], 1, function () {
+            me.Lock = false;
+        });
+    },
+    initWave: function initWave() {
+        var me = this,
+            audioContext = new AudioContext();
+
+        me.Painter = new Jsonic.Painter();
+
+        this.UserMedia = navigator.getUserMedia({
+            audio: { optional: [{ echoCancellation: false }] }
+        }, function (stream) {
+            var _input = audioContext.createMediaStreamSource(stream),
+                _analyser = audioContext.createAnalyser();
+            _input.connect(_analyser);
+
+            me.Painter.attach(me.Canvas[0], _analyser, { 'BF': {
+                    func: 'wave',
+                    config: {
+                        StrokeStyle: '255,255,255'
+                    }
+                } });
+        }, function () {});
+    },
+    init: function init() {
+        var me = this;
+        me.Icon.bind('click', function () {
+            if (!me.Lock) {
+                me.Lock = true;
+                if (me.IsOn) {
+                    me.AshHide.play();
+                    me.stop();
+                } else {
+                    me.AshShow.play();
+                    me.start();
+                }
+            }
+        });
+    },
+    start: function start() {
+        this.Voix.start();
+        this.Painter && this.Painter.start();
+        this.IsOn = true;
+    },
+    stop: function stop() {
+        this.Voix.stop();
+        this.Painter && this.Painter.stop();
+        this.IsOn = false;
+    }
+};
 
 exports.default = {
     data: function data() {
         //var id = this.$route.params.id;
+        return {};
+    },
+
+    beforeRouteLeave: function beforeRouteLeave(to, from, next) {
+        this.Voice.stop();
+        next();
+    },
+    methods: {
+        init: function init() {
+            if (!this.Inited) {
+                this.Voice = new Siri($('#con_siri'));
+                this.Inited = true;
+            }
+        }
+    },
+    computed: {},
+    mounted: function mounted() {
+        this.init();
+        //this.initAsh();
+        //console.log(this.$el);
+    }
+};
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+exports.default = {
+    data: function data() {
         return {};
     },
 
@@ -13191,30 +13515,6 @@ exports.default = {
 };
 
 /***/ }),
-/* 15 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
 /* 19 */
 /***/ (function(module, exports) {
 
@@ -13222,6 +13522,42 @@ exports.default = {
 
 /***/ }),
 /* 20 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -13250,7 +13586,7 @@ if (false) {
 }
 
 /***/ }),
-/* 21 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -13275,7 +13611,36 @@ if (false) {
 }
 
 /***/ }),
-/* 22 */
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "con"
+  }, [_c('div', {
+    staticClass: "con con_hd"
+  }, [_c('span', {
+    staticClass: "s1"
+  }, [_vm._v("Voice")]), _vm._v(" "), _c('span', {
+    staticClass: "center s2"
+  }, [_vm._v("Text")]), _vm._v(" "), _c('span', {
+    staticClass: "s3"
+  }, [_vm._v("Action")])]), _vm._v(" "), _c('div', {
+    staticClass: "con con_mobile"
+  }, [_c('p', [_vm._v("What's the thinking of speech recognition?")])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-539fea68", module.exports)
+  }
+}
+
+/***/ }),
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -13300,7 +13665,32 @@ if (false) {
 }
 
 /***/ }),
-/* 23 */
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "con"
+  }, [_c('div', {
+    staticClass: "con con_hd"
+  }, [_c('i', {
+    staticClass: "center img_speaker"
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "con con_mobile"
+  }, [_c('p', [_vm._v("I believe you guys here are artists. ")])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-6b7a712a", module.exports)
+  }
+}
+
+/***/ }),
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -13342,7 +13732,7 @@ if (false) {
 }
 
 /***/ }),
-/* 24 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -13352,9 +13742,26 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "con"
   }, [_c('div', {
     staticClass: "con con_hd"
+  }, [_c('div', {
+    staticClass: "center con_siri",
+    attrs: {
+      "id": "con_siri"
+    }
   }, [_c('i', {
-    staticClass: "icon_siri center"
-  })]), _vm._v(" "), _c('div', {
+    staticClass: "icon_siri"
+  }), _vm._v(" "), _c('h1', {
+    staticStyle: {
+      "display": "none"
+    }
+  }, [_vm._v("Hello world")]), _vm._v(" "), _c('canvas', {
+    staticStyle: {
+      "display": "none"
+    },
+    attrs: {
+      "width": "1000px",
+      "height": "400px"
+    }
+  })])]), _vm._v(" "), _c('div', {
     staticClass: "con con_mobile"
   }, [_c('p', [_vm._v("What's fisrt App come to your mind after you hear speech recognition?")])])])
 }]}
@@ -13367,7 +13774,7 @@ if (false) {
 }
 
 /***/ }),
-/* 25 */
+/* 33 */
 /***/ (function(module, exports) {
 
 var g;

@@ -146,6 +146,7 @@ Nav.prototype = {
     },
     _initSync:function(){
     	var me = this;
+        MESSAGE.update(0);
     	MESSAGE.bind(function(index){
     		me.go(index);
     	});

@@ -4,7 +4,9 @@ import VueRouter from 'vue-router';
 import NavTool from '../vue/navTool.vue';
 import RockUp from '../vue/rockUp.vue';
 import SpeechRecognition from '../vue/speechRecognition.vue';
+import SpeechRecognitionThinking from '../vue/speechRecognitionThinking.vue';
 import DecorateSound from '../vue/decorateSound.vue';
+import GuitarSpeakers from '../vue/guitarSpeakers.vue';
 import Essence from '../vue/essence.vue';
 
 Vue.use(VueRouter);
@@ -31,8 +33,12 @@ const router = new VueRouter({
         path: '/rockUp', component: RockUp
     },{ 
         path: '/speechRecognition', component: SpeechRecognition
+    },{ 
+        path: '/speechRecognitionThinking', component: SpeechRecognitionThinking
     },{
         path:'/decorateSound',component: DecorateSound
+    },{
+        path:'/guitarSpeakers',component: GuitarSpeakers
     },{
         path:'/essence',component: Essence
     }]

@@ -1,0 +1,192 @@
+<template>
+    <div class='con'>
+        <div class='con con_hd'>
+            <div class='con_space center' id='con_space'>
+                <i class='avatar4'></i>
+                <i class='avatar2' style="display:none;"></i>
+                <i class='avatar3' style="display:none;"></i>
+                <i class='avatar1' style="display:none;"></i>
+                <i class='avatar1' style="display:none;"></i>
+                <i class='avatar1' style="display:none;"></i>
+                <i class='avatar2' style="display:none;"></i>
+                <i class='avatar2' style="display:none;"></i>
+            </div>
+        </div>
+        <div class='con con_mobile'>
+            <p>Sound spread in space.</p>
+        </div>
+    </div>
+</template>
+
+<script>
+var Space = function(){
+    this.Con = $('#con_space');
+    this.Icons = this.Con.find('I');
+    this.RTableR = 150;
+    this.State = 0;
+
+    this.Lock = false;
+    this.initLoc();
+    this.initAsh();
+    this.init();
+};
+Space.prototype={
+    initLoc:function(){
+        var w = this.Con.width(),
+            h = this.Con.height(),
+            sw = 70,
+            x1 = (w-sw)/2>>0,
+            y1 = (h-sw)/2>>0,
+            locs = [],
+            i,           
+            l = this.Icons.length;
+
+        //s1
+        for(i=0;i<l;i++){
+            locs.push([{
+                x:x1,
+                y:y1
+            }]);
+        }
+        //s2
+        var gap =30;
+        locs[0].push({
+            x:x1,
+            y:y1-sw-gap
+        });
+
+        for(i=1;i<4;i++){
+            locs[i].push({
+                x:x1+(i-2)*(gap+sw),
+                y:y1+sw
+            });
+        }
+        for(;i<l;i++){
+            locs[i].push({
+                x:x1+(sw+gap)/2+(i-6)*(gap+sw),
+                y:y1+sw*2+gap
+            });
+        }   
+        //s3
+        var cx= w/2>>0,
+            cy= h/2>>0,
+            r = this.RTableR+10+sw/2;
+
+        for(i=0;i<l;i++){
+            locs[i].push({
+                x:(cx+r*Math.sin((1/8+i/4)*Math.PI)>>0)-sw/2,
+                y:(cy-r*Math.cos((1/8+i/4)*Math.PI)>>0)-sw/2
+            });
+        }  
+
+        this.Locs = locs;
+
+    },
+    initAsh:function(){
+        var me=this,
+            arr1 = [],
+            arr2 = [],
+            i,           
+            l = this.Icons.length,
+            t1= 24,
+            t2=10,
+            delay;
+
+        for(i=0;i<l;i++){
+            //a1
+            delay = i*6;
+            arr1.push({
+                dom:me.Icons[i],
+                css:[{'left':me.Locs[i][0].x+'px'},{'left':me.Locs[i][1].x+'px'}],
+                tween:'easeIn',
+                time:t1,
+                delay:delay
+            });
+            arr1.push({
+                dom:me.Icons[i],
+                css:[{'top':me.Locs[i][0].y+'px'},{'top':me.Locs[i][1].y+'px'}],
+                tween:'easeIn',
+                time:t1,
+                delay:4+delay
+            });
+            arr1.push({
+                dom:me.Icons[i],
+                css:[{display:'',opacity:0,transform: 'scale(0.3)'},{opacity:1,transform: 'scale(1)'}],
+                time:t1,
+                delay:delay
+            });
+            //a2
+            arr2.push({
+                dom:me.Icons[i],
+                css:[{'left':me.Locs[i][1].x+'px'},{'left':me.Locs[i][2].x+'px'}],
+                tween:'easeIn',
+                time:t1,
+                delay:delay
+            });
+            arr2.push({
+                dom:me.Icons[i],
+                css:[{'top':me.Locs[i][1].y+'px'},{'top':me.Locs[i][2].y+'px'}],
+                tween:'easeIn',
+                time:t1,
+                delay:4+delay
+            });
+        }
+
+        this.Ash1 = new Ash.S(arr1,1,function(){
+            me.State = 1;
+            me.Lock = false;
+        });
+
+        this.Ash2 = new Ash.S(arr2,1,function(){
+            me.State = 2;
+            me.Lock = false;
+        });
+    },
+    init:function(){
+        var me = this;
+        $(this.Icons[0]).bind('click',function(){
+            if(!me.Lock && me.State ===0){
+                me.Lock=true;
+                me.Ash1.play();
+            }else if(!me.Lock && me.State ===1){
+                me.Lock=true;
+                me.Ash2.play();
+            }
+        });
+    },
+    loc:function(){
+        this.Icons[0].style.left = this.Locs[0][0].x+'px';
+        this.Icons[0].style.top = this.Locs[0][0].y+'px';
+        this.State = 0;
+    }
+};
+
+export default {
+    data() {
+        return {
+
+        }
+    },
+    methods:{
+        init:function(){
+            if(!this.Inited){
+                this.Space = new Space();
+                this.Inited = true;
+            }
+        }
+    },
+    computed:{
+
+    },
+    mounted(){
+        this.init();
+        this.Space.loc();
+        //this.initAsh();
+        //console.log(this.$el);
+    }
+}
+</script>
+
+<style scoped>
+
+</style>

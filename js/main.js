@@ -7,6 +7,7 @@ import SpeechRecognition from '../vue/speechRecognition.vue';
 import SpeechRecognitionThinking from '../vue/speechRecognitionThinking.vue';
 import DecorateSound from '../vue/decorateSound.vue';
 import GuitarSpeakers from '../vue/guitarSpeakers.vue';
+import SoundInSpace from '../vue/soundInSpace.vue';
 import Essence from '../vue/essence.vue';
 
 Vue.use(VueRouter);
@@ -39,6 +40,8 @@ const router = new VueRouter({
         path:'/decorateSound',component: DecorateSound
     },{
         path:'/guitarSpeakers',component: GuitarSpeakers
+    },{
+        path:'/soundInSpace',component: SoundInSpace
     },{
         path:'/essence',component: Essence
     }]

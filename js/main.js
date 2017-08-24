@@ -9,25 +9,12 @@ import DecorateSound from '../vue/decorateSound.vue';
 import GuitarSpeakers from '../vue/guitarSpeakers.vue';
 import SoundInSpace from '../vue/soundInSpace.vue';
 import Essence from '../vue/essence.vue';
+import Melody from '../vue/melody.vue';
+import Ultrasound from '../vue/ultrasound.vue';
 
 Vue.use(VueRouter);
 
 window.LOCK_ANIMATION =false;
-
-/*
-const routeArr = [{ 
-        path: '/music', component: Music
-    },{
-        path:'/speechRecognition',component:SpeechRecognition
-    },{
-        path:'/ultrasound',component:Ultrasound
-    }];
-
-
-for(var i=0,l=routeArr.length;i<l;i++){
-    routeArr[i].Name = routeArr[i].slice(1);
-}
-*/
 
 const router = new VueRouter({
   	routes:[{ 
@@ -44,6 +31,10 @@ const router = new VueRouter({
         path:'/soundInSpace',component: SoundInSpace
     },{
         path:'/essence',component: Essence
+    },{
+        path:'/melody',component: Melody
+    },{
+        path:'/ultrasound',component: Ultrasound
     }]
 });
 

@@ -94,7 +94,7 @@ Space.prototype={
 
         for(i=0;i<l;i++){
             //a1
-            delay = i*6;
+            delay = i*2;
             arr1.push({
                 dom:me.Icons[i],
                 css:[{'left':me.Locs[i][0].x+'px'},{'left':me.Locs[i][1].x+'px'}],
@@ -105,16 +105,18 @@ Space.prototype={
             arr1.push({
                 dom:me.Icons[i],
                 css:[{'top':me.Locs[i][0].y+'px'},{'top':me.Locs[i][1].y+'px'}],
-                tween:'easeIn',
+                tween:'easeOut',
                 time:t1,
-                delay:4+delay
+                delay:2+delay
             });
-            arr1.push({
-                dom:me.Icons[i],
-                css:[{display:'',opacity:0,transform: 'scale(0.3)'},{opacity:1,transform: 'scale(1)'}],
-                time:t1,
-                delay:delay
-            });
+            if(i!==0){
+                arr1.push({
+                    dom:me.Icons[i],
+                    css:[{display:'',opacity:0,transform: 'scale(0.3)'},{opacity:1,transform: 'scale(1)'}],
+                    time:t1,
+                    delay:delay
+                });                
+            }
             //a2
             arr2.push({
                 dom:me.Icons[i],
@@ -128,7 +130,7 @@ Space.prototype={
                 css:[{'top':me.Locs[i][1].y+'px'},{'top':me.Locs[i][2].y+'px'}],
                 tween:'easeIn',
                 time:t1,
-                delay:4+delay
+                delay:2+delay
             });
         }
 

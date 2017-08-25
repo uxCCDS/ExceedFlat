@@ -19,6 +19,10 @@ export default {
 
         }
     },
+    beforeRouteLeave:function(to, from, next){
+        this.Melody.stopMusic();
+        next();
+    },
     methods:{
         init:function(){
             if(!this.Inited){

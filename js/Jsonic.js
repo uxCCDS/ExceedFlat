@@ -385,7 +385,7 @@
         };
 
         var Track=function(context){
-            this.Ctx = context || new webkitAudioContext();
+            this.Ctx = context || new AudioContext();
 
             //this.Oscillator =this.Ctx .createOscillator();
             this.IsRunning=false;
@@ -483,7 +483,7 @@
         };
 
         var TrackGain=function(context){
-            this.Ctx = context || new webkitAudioContext();
+            this.Ctx = context || new AudioContext();
 
             //this.Oscillator =this.Ctx .createOscillator();
             this.IsFree=true;

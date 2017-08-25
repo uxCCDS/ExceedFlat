@@ -13286,6 +13286,10 @@ exports.default = {
         return {};
     },
 
+    beforeRouteLeave: function beforeRouteLeave(to, from, next) {
+        this.Melody.stopMusic();
+        next();
+    },
     methods: {
         init: function init() {
             if (!this.Inited) {

@@ -31,7 +31,7 @@
 .con_melody_group span{ width: 50px;}
 .con_melody_group h1{ width: 120px;}
 .con_melody_group .line{ width: 0px; height: 100px; position: absolute; border-right: 1px solid white; }
-.con_melody h2{font-size: 80px; text-align: center; display: block; height: 100px; line-height: 100px; width: 100%; position: absolute; left: 0px; top: -100px;}
+.con_melody h2{font-size: 80px; text-align: center; display: block; height: 100px; line-height: 100px; width: 100%; position: absolute; left: 0px; top: 0px;}
 
 .con_ultrasound{width: 1000px; height: 400px;}
 .con_ultrasound .rule{width: 1000px; height: 40px; position: absolute; top: 100%; left: 0px; border-top: 2px solid white;}

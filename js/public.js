@@ -273,7 +273,7 @@ var MelodyGroup = function(root,w,h,left,hz){
     this.H = h;
     this.Nw = 50;
     this.Nh = 40;
-    this.Nt = (this.H-this.Nh)/2-100>>0;
+    this.Nt = (this.H-this.Nh)/2>>0;
     this.Gap1 = this.W/12-this.Nw>>0;
     this.Gap2 = this.W/7-this.Nw>>0;
 
@@ -491,7 +491,7 @@ var Rule = function(){
 Rule.prototype={
     initAsh:function(){
         var me=this,
-            t = 10;
+            t = 20;
         this.AshShowTag= new Ash.S([{
             dom:me.Imgs,
             css:[{display:'',opacity:0},{opacity:1}],
@@ -510,7 +510,7 @@ Rule.prototype={
     showTag:function(){
         if(!this.Lock){
             this.Lock = true;
-            this.AshShow.play();
+            this.AshShowTag.play();
         }
     },
     hideTag:function(){
@@ -541,6 +541,7 @@ Rule.prototype={
         for(var i=0,l=HZ.length;i<l;i++){
             img = document.createElement('IMG');
             img.src = '../img/hz'+HZ[i]+'.svg';
+            img.style.display = 'none';
             img.style.left = HZ[i]*this.StepL +'px';
             this.Imgs.push(img);
             this.Con[0].appendChild(img);

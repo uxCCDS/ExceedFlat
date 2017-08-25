@@ -36,3 +36,11 @@
 .con_ultrasound{width: 1000px; height: 400px;}
 .con_ultrasound .rule{width: 1000px; height: 40px; position: absolute; top: 100%; left: 0px; border-top: 2px solid white;}
 .con_ultrasound .rule i{position: absolute; top: 0px; height: 40px; line-height: 40px;  font-size: 20px;  }
+.con_ultrasound .rule img{display: block; width: 60px; height: 60px; position: absolute; top:-100px;}
+
+
+
+
+
+
+

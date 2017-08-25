@@ -1,7 +1,7 @@
 <template>
     <div class='con'>
-        <div class='con con_hd'>
-            <div class='center con_ultrasound' id='con_ultrasound'>
+        <div class='con con_hd' id='con_ultrasound'>
+            <div class='center con_ultrasound'>
                 <div class='rule' id='rule'></div>
             </div>
         </div>
@@ -25,6 +25,7 @@ export default {
                 this.Sonic = new MSonic();
                 this.Inited = true;
             }
+            this.Sonic.reset();
         }
     },
     computed:{

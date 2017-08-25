@@ -484,12 +484,45 @@ var Rule = function(){
     this.All = 25000;
     this.StepL = this.Len/this.All;
     this.Pos = [1000,5000,10000,15000,20000,22000];
-
+    this.Imgs = [];
+    this.Lock = false;
     this.init();
 };
 Rule.prototype={
+    initAsh:function(){
+        var me=this,
+            t = 10;
+        this.AshShowTag= new Ash.S([{
+            dom:me.Imgs,
+            css:[{display:'',opacity:0},{opacity:1}],
+            time:t
+        }],1,function(){
+            me.Lock = false;
+        });
+        this.AshSHideTag= new Ash.S([{
+            dom:me.Imgs,
+            css:[{opacity:1},{display:'none',opacity:0}],
+            time:t
+        }],1,function(){
+            me.Lock = false;
+        });
+    },
+    showTag:function(){
+        if(!this.Lock){
+            this.Lock = true;
+            this.AshShow.play();
+        }
+    },
+    hideTag:function(){
+        if(!this.Lock){
+            this.Lock = true;
+            this.AshSHideTag.play();
+        }
+    },
     init:function(){
         this.create();
+        this.createTags();
+        this.initAsh();
     },
     create:function(){
         var node,
@@ -501,15 +534,44 @@ Rule.prototype={
             node.style.left= val*this.StepL +'px';
             this.Con[0].appendChild(node);
         }
+    },
+    createTags:function(){
+        var HZ = ['20','1700','3600','8000'],
+            img;
+        for(var i=0,l=HZ.length;i<l;i++){
+            img = document.createElement('IMG');
+            img.src = '../img/hz'+HZ[i]+'.svg';
+            img.style.left = HZ[i]*this.StepL +'px';
+            this.Imgs.push(img);
+            this.Con[0].appendChild(img);
+        }
     }
 };
 
 var Sonic = function(){
+    this.Con = $('#con_ultrasound');
     this.init();
+    this.reset();
 };
 Sonic.prototype={
     init:function(){
+        var me = this;
         this.Rule = new Rule();
+        this.Con.bind('click',function(){
+            me.next();
+        });
+    },
+    reset:function(){
+        this.Rule.Lock = false;
+        this.State = 0;
+    },
+    next:function(){
+        switch(this.State){
+            case 0:
+                this.Rule.showTag();
+                break;
+        }   
+        this.State++;
     }
 };
 

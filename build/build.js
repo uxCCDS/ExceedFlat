@@ -13928,6 +13928,7 @@ exports.default = {
                 this.Sonic = new MSonic();
                 this.Inited = true;
             }
+            this.Sonic.reset();
         }
     },
     computed: {},
@@ -14283,12 +14284,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     staticClass: "con"
   }, [_c('div', {
-    staticClass: "con con_hd"
-  }, [_c('div', {
-    staticClass: "center con_ultrasound",
+    staticClass: "con con_hd",
     attrs: {
       "id": "con_ultrasound"
     }
+  }, [_c('div', {
+    staticClass: "center con_ultrasound"
   }, [_c('div', {
     staticClass: "rule",
     attrs: {

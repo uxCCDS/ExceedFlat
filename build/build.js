@@ -13287,16 +13287,20 @@ exports.default = {
     },
 
     beforeRouteLeave: function beforeRouteLeave(to, from, next) {
-        this.Melody.stopMusic();
+        if (!window.IsMobile) {
+            this.Melody.stopMusic();
+        }
         next();
     },
     methods: {
         init: function init() {
-            if (!this.Inited) {
-                this.Melody = new MMelody();
-                this.Inited = true;
+            if (!window.IsMobile) {
+                if (!this.Inited) {
+                    this.Melody = new MMelody();
+                    this.Inited = true;
+                }
+                this.Melody.reset();
             }
-            this.Melody.reset();
         }
     },
     computed: {},
@@ -13456,16 +13460,20 @@ exports.default = {
 
     methods: {
         init: function init() {
-            if (!this.Inited) {
-                this.Mel = new Melody($('#RockUpSub'));
-                this.Inited = true;
+            if (!window.IsMobile) {
+                if (!this.Inited) {
+                    this.Mel = new Melody($('#RockUpSub'));
+                    this.Inited = true;
+                }
             }
         },
         play: function play() {
-            var me = this;
-            setTimeout(function () {
-                me.Mel.play();
-            }, 500);
+            if (!window.IsMobile) {
+                var me = this;
+                setTimeout(function () {
+                    me.Mel.play();
+                }, 500);
+            }
         }
     },
     computed: {},
@@ -13666,8 +13674,10 @@ exports.default = {
     },
     computed: {},
     mounted: function mounted() {
-        this.init();
-        this.Space.loc();
+        if (!window.IsMobile) {
+            this.init();
+            this.Space.loc();
+        }
         //this.initAsh();
         //console.log(this.$el);
     }
@@ -13836,7 +13846,9 @@ exports.default = {
     },
 
     beforeRouteLeave: function beforeRouteLeave(to, from, next) {
-        this.Voice.stop();
+        if (!window.IsMobile) {
+            this.Voice.stop();
+        }
         next();
     },
     methods: {
@@ -13849,7 +13861,10 @@ exports.default = {
     },
     computed: {},
     mounted: function mounted() {
-        this.init();
+        if (!window.IsMobile) {
+            this.init();
+        }
+
         //this.initAsh();
         //console.log(this.$el);
     }
@@ -13890,7 +13905,10 @@ exports.default = {
     },
     computed: {},
     mounted: function mounted() {
-        this.init();
+        if (!window.IsMobile) {
+            this.init();
+        }
+
         //this.initAsh();
         //console.log(this.$el);
     }
@@ -13919,6 +13937,8 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
 
 
 exports.default = {
@@ -13926,6 +13946,12 @@ exports.default = {
         return {};
     },
 
+    beforeRouteLeave: function beforeRouteLeave(to, from, next) {
+        if (!window.IsMobile) {
+            this.Sonic.clear();
+        }
+        next();
+    },
     methods: {
         init: function init() {
             if (!this.Inited) {
@@ -13937,7 +13963,14 @@ exports.default = {
     },
     computed: {},
     mounted: function mounted() {
-        this.init();
+        if (!window.IsMobile) {
+            this.init();
+        } else {
+            if (!this.Inited) {
+                this.UltrasoundSender = new UltrasoundSender();
+                this.Inited = true;
+            }
+        }
         //this.initAsh();
         //console.log(this.$el);
     }
@@ -14294,14 +14327,28 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('div', {
     staticClass: "center con_ultrasound"
-  }, [_c('div', {
+  }, [_c('canvas', {
+    attrs: {
+      "width": "1000",
+      "height": "400",
+      "id": "cvs_utlrasound"
+    }
+  }), _vm._v(" "), _c('div', {
     staticClass: "rule",
     attrs: {
       "id": "rule"
     }
   })])]), _vm._v(" "), _c('div', {
-    staticClass: "con con_mobile"
-  }, [_c('p', [_vm._v("20000HZ")])])])
+    staticClass: "con con_mobile con_ultrasound_mobile",
+    attrs: {
+      "id": "con_ultrasound_mobile"
+    }
+  }, [_c('input', {
+    attrs: {
+      "id": "ultrasoundIpt",
+      "type": "text"
+    }
+  }), _vm._v(" "), _c('a', [_vm._v("Send")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {

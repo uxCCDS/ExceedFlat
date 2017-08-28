@@ -181,8 +181,10 @@ export default {
 
     },
     mounted(){
-        this.init();
-        this.Space.loc();
+        if(!window.IsMobile){
+            this.init();
+            this.Space.loc();            
+        }
         //this.initAsh();
         //console.log(this.$el);
     }

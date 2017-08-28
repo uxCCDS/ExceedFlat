@@ -6,4 +6,7 @@
 .con_nav{ top: 20px; left: 0px;}
 .con_nav_sub {top: 56px; left: 0px; background-color: #552668;}
 
+.con_ultrasound_mobile a{ display: block; width: 90%; margin: 10px 5%; height: 30px; line-height: 30px; background: linear-gradient(45deg,#39004B,#9019C2);border-radius: 10px;text-align: center; font-size: 20px;  }
+.con_ultrasound_mobile input{display: block; background: transparent; border:none;border-bottom: 1px solid rgba(255,255,255,0.2) ; width: 90%; margin: 10px 5%; height: 30px; line-height: 30px;}
+
 .brand{display: none;}

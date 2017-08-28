@@ -2,11 +2,13 @@
     <div class='con'>
         <div class='con con_hd' id='con_ultrasound'>
             <div class='center con_ultrasound'>
+                <canvas width="1000" height="400" id='cvs_utlrasound'></canvas>
                 <div class='rule' id='rule'></div>
             </div>
         </div>
-        <div class='con con_mobile'>
-            <p>20000HZ</p>
+        <div class='con con_mobile con_ultrasound_mobile' id='con_ultrasound_mobile'>
+            <input id='ultrasoundIpt' type="text" />
+            <a>Send</a>
         </div>
     </div>
 </template>
@@ -18,6 +20,12 @@ export default {
         return {
 
         }
+    },
+    beforeRouteLeave:function(to, from, next){
+        if(!window.IsMobile){
+            this.Sonic.clear();               
+        }
+        next(); 
     },
     methods:{
         init:function(){
@@ -32,7 +40,14 @@ export default {
 
     },
     mounted(){
-        this.init();
+        if(!window.IsMobile){
+            this.init();
+        }else{
+            if(!this.Inited){
+                this.UltrasoundSender = new UltrasoundSender();
+                this.Inited = true;
+            }
+        }
         //this.initAsh();
         //console.log(this.$el);
     }

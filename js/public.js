@@ -1,5 +1,7 @@
 (function(){
 
+    window.IsMobile = /mobile/i.test(navigator.userAgent);
+
 	var CONNECTCENTER,
 		MESSAGE;
 
@@ -608,7 +610,82 @@ Rule.prototype={
     }
 };
 
+var UltrasoundSender = function(){
+    this.Con = $('#con_ultrasound_mobile');
+    this.Ipt = this.Con.find('INPUT');
+    this.Btn = this.Con.find('A');
+    this.Band = new Jsonic.Band();
+    this.Band.initDefaultChannel();
 
+    this.Lock = false;
+    this.init();
+};
+UltrasoundSender.prototype={
+    init:function(){
+        var me = this,
+            reg = /\n\t\r\s/g,
+            val;
+        me.Btn.bind('click',function(){
+            val = me.Ipt.val().replace(reg,'');
+            if(!me.Lock && val!==''){
+                me.Lock = true;
+                me.Btn.attr('disabled','disabled');
+                me.Ipt.val('Sending Msg: '+val);
+                me.Band.send(val,function(){
+                    me.Ipt.val('');
+                    me.Btn.attr('disabled','false');
+                    me.Lock =false;
+                });
+            }
+        });
+        me.Ipt.bind('keyup',function(e){
+            e.stopPropagation();
+        });
+    }
+};
+
+var UltrasoundSenderAccept = function(){
+    this.Canvas = $('#cvs_utlrasound');
+    this.AudioContext = new AudioContext();
+    this.initCanvas();
+};
+UltrasoundSenderAccept.prototype = {
+    init:function(){
+        this.initCanvas();
+    },
+    initCanvas:function(){
+        var me = this,
+            audioContext = this.AudioContext;
+        me.Painter = new Jsonic.Painter();
+        this.UserMedia = navigator.getUserMedia({
+            audio:{optional:[{echoCancellation:false}]}
+        },function(stream){
+            var _input = audioContext.createMediaStreamSource(stream),
+                _analyser = audioContext.createAnalyser();
+            _input.connect(_analyser);
+
+            me.Painter.attach(me.Canvas[0],_analyser,{'BF':{
+                func:'rectangle',
+                config:{
+                    XNum:128,
+                    XGap:2,
+                    YMid:300,
+                    FillStyle:'#ffffff'
+                }
+            }});
+
+        },function(){
+
+        });
+    },
+    start:function(){
+        this.Painter.start();
+    },
+    stop:function(){
+        this.Painter.stop();
+    }
+};
+//AudioContext()
 
 var Sonic = function(){
     this.Con = $('#con_ultrasound');
@@ -619,6 +696,7 @@ Sonic.prototype={
     init:function(){
         var me = this;
         this.Rule = new Rule();
+        this.Accept = new UltrasoundSenderAccept();
         this.Con.bind('click',function(){
             me.next();
         });
@@ -627,10 +705,17 @@ Sonic.prototype={
         this.Rule.Lock = false;
         this.State = 0;
     },
+    clear:function(){
+        this.Accept.stop();
+    },
     next:function(){
         switch(this.State){
             case 0:
                 this.Rule.showTag();
+                break;
+            case 1:
+                this.Rule.hideTag();
+                this.Accept.start();
                 break;
         }   
         this.State++;
@@ -642,6 +727,7 @@ window.ConnectCenter = new ConnectCenter();
 window.MNav = Nav;
 window.MMelody = Melody;
 window.MSonic = Sonic;
+window.UltrasoundSender = UltrasoundSender;
 
 })();
 

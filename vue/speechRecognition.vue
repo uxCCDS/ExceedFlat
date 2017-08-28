@@ -155,8 +155,10 @@ export default {
         }
     },
     beforeRouteLeave:function(to, from, next){
-        this.Voice.stop();
-        next();
+        if(!window.IsMobile){
+            this.Voice.stop();              
+        }
+        next(); 
     },
     methods:{
         init:function(){
@@ -170,7 +172,10 @@ export default {
 
     },
     mounted(){
-        this.init();
+        if(!window.IsMobile){
+            this.init();
+        }
+        
         //this.initAsh();
         //console.log(this.$el);
     }

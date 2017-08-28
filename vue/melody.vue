@@ -20,16 +20,20 @@ export default {
         }
     },
     beforeRouteLeave:function(to, from, next){
-        this.Melody.stopMusic();
+        if(!window.IsMobile){
+            this.Melody.stopMusic();   
+        }
         next();
     },
     methods:{
         init:function(){
-            if(!this.Inited){
-                this.Melody = new MMelody();
-                this.Inited = true;
+            if(!window.IsMobile){
+                if(!this.Inited){
+                    this.Melody = new MMelody();
+                    this.Inited = true;
+                }
+                this.Melody.reset();                
             }
-            this.Melody.reset();
         }
     },
     computed:{

@@ -79,16 +79,20 @@ export default {
     },
     methods:{
         init:function(){
-            if(!this.Inited){
-                this.Mel = new Melody($('#RockUpSub'));
-                this.Inited = true;
+            if(!window.IsMobile){
+                if(!this.Inited){
+                    this.Mel = new Melody($('#RockUpSub'));
+                    this.Inited = true;
+                }
             }
         },
         play:function(){
-            var me = this;
-            setTimeout(function(){
-                me.Mel.play();
-            },500);
+            if(!window.IsMobile){
+                var me = this;
+                setTimeout(function(){
+                    me.Mel.play();
+                },500);                
+            }
         }
     },
     computed:{

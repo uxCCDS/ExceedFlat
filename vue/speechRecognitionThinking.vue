@@ -28,7 +28,10 @@ export default {
 
     },
     mounted(){
-        this.init();
+        if(!window.IsMobile){
+            this.init();
+        }
+        
         //this.initAsh();
         //console.log(this.$el);
     }

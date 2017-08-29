@@ -1,6 +1,7 @@
 <template>
     <div class='con'>
         <div class='con con_hd'>
+            <audio src="../img/LetItGo.mp3" preload loop='loop' id='LetItGo' style="display:none"></audio>
             <div class='con_space center' id='con_space'>
                 <i class='avatar4'></i>
                 <i class='avatar2' style="display:none;"></i>
@@ -20,8 +21,11 @@
 
 <script>
 var Space = function(){
+    this.Sound = this.SoundSpace = new SoundSpace();
+
     this.Con = $('#con_space');
     this.Icons = this.Con.find('I');
+    this.JIcons = Tool.buildJqueryArray(this.Icons);
     this.RTableR = 150;
     this.State = 0;
 
@@ -32,7 +36,8 @@ var Space = function(){
 };
 Space.prototype={
     initLoc:function(){
-        var w = this.Con.width(),
+        var me=this,
+            w = this.Con.width(),
             h = this.Con.height(),
             sw = 70,
             x1 = (w-sw)/2>>0,
@@ -72,11 +77,23 @@ Space.prototype={
             cy= h/2>>0,
             r = this.RTableR+10+sw/2;
 
+        var _x,_y;
+
         for(i=0;i<l;i++){
             locs[i].push({
                 x:(cx+r*Math.sin((1/8+i/4)*Math.PI)>>0)-sw/2,
                 y:(cy-r*Math.cos((1/8+i/4)*Math.PI)>>0)-sw/2
             });
+            (function(i){
+                me.JIcons[i].bind('click',function(e){
+                    if(me.State===2){
+                        me.Sound.position((locs[i][2].x-500)/10>>0,(300-locs[i][2].y)/10>>0,0);
+                        me.Sound.play();
+                    }
+                    e.stopPropagation();
+                });
+            })(i);
+            //initSound;
         }  
 
         this.Locs = locs;
@@ -146,6 +163,9 @@ Space.prototype={
     },
     init:function(){
         var me = this;
+        this.Con.bind('click',function(){
+            me.Sound.stop();
+        });
         $(this.Icons[0]).bind('click',function(){
             if(!me.Lock && me.State ===0){
                 me.Lock=true;
@@ -168,6 +188,12 @@ export default {
         return {
 
         }
+    },
+    beforeRouteLeave:function(to, from, next){
+        if(!window.IsMobile){
+            this.Space.SoundSpace.clear();               
+        }
+        next(); 
     },
     methods:{
         init:function(){

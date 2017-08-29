@@ -2,7 +2,8 @@
     <div class='con'>
         <div class='con con_hd' id='con_ultrasound'>
             <div class='center con_ultrasound'>
-                <canvas width="1000" height="400" id='cvs_utlrasound'></canvas>
+                <h1 id='con_ultrasound_msg' class='con_ultrasound_msg'></h1>
+                <canvas width="1024" height="400" id='cvs_utlrasound'></canvas>
                 <div class='rule' id='rule'></div>
             </div>
         </div>
@@ -55,5 +56,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

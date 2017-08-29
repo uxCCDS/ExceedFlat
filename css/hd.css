@@ -33,6 +33,8 @@
 .con_melody_group .line{ width: 0px; height: 100px; position: absolute; border-right: 1px solid white; }
 .con_melody h2{font-size: 80px; text-align: center; display: block; height: 100px; line-height: 100px; width: 100%; position: absolute; left: 0px; top: 0px;}
 
+.con_ultrasound_msg{width: 100%; height: 50px; line-height: 50px; font-size: 40px; position: absolute; top: -50px;left: 0px;color: white; text-align: center; }
+
 .con_ultrasound{width: 1000px; height: 400px;}
 .con_ultrasound .rule{width: 1000px; height: 40px; position: absolute; top: 100%; left: 0px; border-top: 2px solid white;}
 .con_ultrasound .rule i{position: absolute; top: 0px; height: 40px; line-height: 40px;  font-size: 20px;  }

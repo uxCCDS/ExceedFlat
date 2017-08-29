@@ -647,11 +647,23 @@ UltrasoundSender.prototype={
 var UltrasoundSenderAccept = function(){
     this.Canvas = $('#cvs_utlrasound');
     this.AudioContext = new AudioContext();
-    this.initCanvas();
+    this.H1 = $('#con_ultrasound_msg');
+    this.Band = new Jsonic.Band(this.AudioContext);
+    this.Band.initDefaultChannel();
+
+    this.init();
 };
 UltrasoundSenderAccept.prototype = {
     init:function(){
+        var me = this;
         this.initCanvas();
+        this.Band.onMsg=function(data){
+            me.H1.html(data);
+            //me..innerHTML='Get the string: '+data;
+        };
+        this.Band.onStartReceive=function(){
+            me.H1.html('Scanning the environment');
+        };
     },
     initCanvas:function(){
         var me = this,
@@ -663,13 +675,13 @@ UltrasoundSenderAccept.prototype = {
             var _input = audioContext.createMediaStreamSource(stream),
                 _analyser = audioContext.createAnalyser();
             _input.connect(_analyser);
-
+            me.AudioInput = _input;
             me.Painter.attach(me.Canvas[0],_analyser,{'BF':{
                 func:'rectangle',
                 config:{
-                    XNum:128,
-                    XGap:2,
-                    YMid:300,
+                    XNum:1024,
+                    XGap:0,
+                    YMid:390,
                     FillStyle:'#ffffff'
                 }
             }});
@@ -677,6 +689,17 @@ UltrasoundSenderAccept.prototype = {
         },function(){
 
         });
+    },
+    listen:function(){
+        this.Band.listenSource(this.AudioInput);
+        this.Band.scanEnvironment();
+        this.H1.html('Ultrasound');
+        //this.Band.watch(this.Canvas[0],890,920);
+        //this.Painter.stop();
+
+    },
+    unlisten:function(){
+
     },
     start:function(){
         this.Painter.start();
@@ -717,8 +740,49 @@ Sonic.prototype={
                 this.Rule.hideTag();
                 this.Accept.start();
                 break;
+            case 2:
+                this.Accept.listen();
+                break;            
         }   
         this.State++;
+    }
+};
+
+var SoundSpace= function(){
+    this.Ctx = new AudioContext();
+    this.Audio = document.getElementById('LetItGo');
+    this.IsPlay =false;
+    this.init();
+};
+SoundSpace.prototype={
+    init:function(){
+        var sourceNode = this.Ctx.createMediaElementSource(this.Audio);
+        this.Panner = this.Ctx.createPanner();
+        this.Panner.refDistance = 1;
+        this.Panner.maxDistance = 1000;
+        this.Panner.setOrientation(0,0,0,0,1,0);
+        this.Panner.setPosition(0,0,0);
+        sourceNode.connect(this.Panner);
+        this.Panner.connect(this.Ctx.destination);
+    },
+    position:function(x,y,z){
+        console.log(x,y,z);
+        this.Panner.setPosition(x,y,z);
+    },
+    play:function(){
+        if(!this.IsPlay){
+            this.Audio.play();
+            this.IsPlay = true;
+        }
+    },
+    stop:function(){
+        if(this.IsPlay){
+            this.Audio.pause();
+            this.IsPlay = false;
+        }
+    },
+    clear:function(){
+        this.stop();
     }
 };
 
@@ -728,6 +792,7 @@ window.MNav = Nav;
 window.MMelody = Melody;
 window.MSonic = Sonic;
 window.UltrasoundSender = UltrasoundSender;
+window.SoundSpace = SoundSpace;
 
 })();
 

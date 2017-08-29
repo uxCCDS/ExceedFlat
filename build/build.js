@@ -13394,6 +13394,7 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
 
 
 var Note = function Note(str) {
@@ -13452,6 +13453,8 @@ Melody.prototype = {
     }
 };
 
+var _hasPlayed = false;
+
 exports.default = {
     data: function data() {
         //var id = this.$route.params.id;
@@ -13459,6 +13462,12 @@ exports.default = {
     },
 
     methods: {
+        playAudio: function playAudio() {
+            if (!_hasPlayed) {
+                document.getElementById('nokia').play();
+                _hasPlayed = true;
+            }
+        },
         init: function init() {
             if (!window.IsMobile) {
                 if (!this.Inited) {
@@ -13515,10 +13524,14 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
 
 var Space = function Space() {
+    this.Sound = this.SoundSpace = new SoundSpace();
+
     this.Con = $('#con_space');
     this.Icons = this.Con.find('I');
+    this.JIcons = Tool.buildJqueryArray(this.Icons);
     this.RTableR = 150;
     this.State = 0;
 
@@ -13529,7 +13542,8 @@ var Space = function Space() {
 };
 Space.prototype = {
     initLoc: function initLoc() {
-        var w = this.Con.width(),
+        var me = this,
+            w = this.Con.width(),
             h = this.Con.height(),
             sw = 70,
             x1 = (w - sw) / 2 >> 0,
@@ -13569,11 +13583,23 @@ Space.prototype = {
             cy = h / 2 >> 0,
             r = this.RTableR + 10 + sw / 2;
 
+        var _x, _y;
+
         for (i = 0; i < l; i++) {
             locs[i].push({
                 x: (cx + r * Math.sin((1 / 8 + i / 4) * Math.PI) >> 0) - sw / 2,
                 y: (cy - r * Math.cos((1 / 8 + i / 4) * Math.PI) >> 0) - sw / 2
             });
+            (function (i) {
+                me.JIcons[i].bind('click', function (e) {
+                    if (me.State === 2) {
+                        me.Sound.position((locs[i][2].x - 500) / 10 >> 0, (300 - locs[i][2].y) / 10 >> 0, 0);
+                        me.Sound.play();
+                    }
+                    e.stopPropagation();
+                });
+            })(i);
+            //initSound;
         }
 
         this.Locs = locs;
@@ -13642,6 +13668,9 @@ Space.prototype = {
     },
     init: function init() {
         var me = this;
+        this.Con.bind('click', function () {
+            me.Sound.stop();
+        });
         $(this.Icons[0]).bind('click', function () {
             if (!me.Lock && me.State === 0) {
                 me.Lock = true;
@@ -13664,6 +13693,12 @@ exports.default = {
         return {};
     },
 
+    beforeRouteLeave: function beforeRouteLeave(to, from, next) {
+        if (!window.IsMobile) {
+            this.Space.SoundSpace.clear();
+        }
+        next();
+    },
     methods: {
         init: function init() {
             if (!this.Inited) {
@@ -13939,6 +13974,7 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
 
 
 exports.default = {
@@ -14041,21 +14077,35 @@ exports.default = {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "con"
   }, [_c('div', {
-    staticClass: "con con_hd"
-  }, [_c('div', {
+    staticClass: "con con_hd",
+    on: {
+      "click": _vm.playAudio
+    }
+  }, [_vm._m(0)]), _vm._v(" "), _vm._m(1)])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
     staticClass: "text_title center"
   }, [_c('h1', [_vm._v("Rock Up!")]), _vm._v(" "), _c('h2', {
     attrs: {
       "id": "RockUpSub"
     }
-  }, [_vm._v("The Interaction of sound")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("The Interaction of sound")]), _vm._v(" "), _c('audio', {
+    staticStyle: {
+      "display": "none"
+    },
+    attrs: {
+      "src": "../img/nokia.mp3",
+      "preload": "",
+      "id": "nokia"
+    }
+  })])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
     staticClass: "con con_mobile"
-  }, [_c('p', [_vm._v("Thanks for Fiona to introduce the latest technology to us. It helps us to open the door of future.")])])])
+  }, [_c('p', [_vm._v("Thanks for Fiona to introduce the latest technology to us. It helps us to open the door of future.")])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -14111,7 +14161,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "con"
   }, [_c('div', {
     staticClass: "con con_hd"
-  }, [_c('div', {
+  }, [_c('audio', {
+    staticStyle: {
+      "display": "none"
+    },
+    attrs: {
+      "src": "../img/LetItGo.mp3",
+      "preload": "",
+      "loop": "loop",
+      "id": "LetItGo"
+    }
+  }), _vm._v(" "), _c('div', {
     staticClass: "con_space center",
     attrs: {
       "id": "con_space"
@@ -14327,9 +14387,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('div', {
     staticClass: "center con_ultrasound"
-  }, [_c('canvas', {
+  }, [_c('h1', {
+    staticClass: "con_ultrasound_msg",
     attrs: {
-      "width": "1000",
+      "id": "con_ultrasound_msg"
+    }
+  }), _vm._v(" "), _c('canvas', {
+    attrs: {
+      "width": "1024",
       "height": "400",
       "id": "cvs_utlrasound"
     }

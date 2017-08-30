@@ -4,7 +4,7 @@
             <div class='text_title center'>
                 <h1>Rock Up!</h1>
                 <h2 id='RockUpSub'>The Interaction of sound</h2> 
-                <audio src="../img/nokia.mp3" preload id='nokia' style="display:none"></audio>               
+                <audio src="../img/nokia.mp3" preload id='nokia' style="display:none"></audio>             
             </div>
         </div>
         <div class='con con_mobile'>

@@ -13128,6 +13128,7 @@ var vm = new _vue2.default({
 });
 
 window.onload = function () {
+
     vm.$mount('#app');
     router.push('/rockUp');
 };
@@ -13527,7 +13528,7 @@ Object.defineProperty(exports, "__esModule", {
 //
 
 var Space = function Space() {
-    this.Sound = this.SoundSpace = new SoundSpace();
+    this.Sound = new SoundSpace();
 
     this.Con = $('#con_space');
     this.Icons = this.Con.find('I');
@@ -13583,7 +13584,9 @@ Space.prototype = {
             cy = h / 2 >> 0,
             r = this.RTableR + 10 + sw / 2;
 
-        var _x, _y;
+        var _x,
+            _y,
+            current = null;
 
         for (i = 0; i < l; i++) {
             locs[i].push({
@@ -13595,6 +13598,11 @@ Space.prototype = {
                     if (me.State === 2) {
                         me.Sound.position((locs[i][2].x - 500) / 10 >> 0, (300 - locs[i][2].y) / 10 >> 0, 0);
                         me.Sound.play();
+                        if (current != null) {
+                            me.JIcons[current].css('transform', 'scale(1)');
+                        }
+                        current = i;
+                        me.JIcons[i].css('transform', 'scale(1.2)');
                     }
                     e.stopPropagation();
                 });
@@ -13695,7 +13703,7 @@ exports.default = {
 
     beforeRouteLeave: function beforeRouteLeave(to, from, next) {
         if (!window.IsMobile) {
-            this.Space.SoundSpace.clear();
+            this.Space.Sound.clear();
         }
         next();
     },
@@ -13751,7 +13759,10 @@ var Siri = function Siri(con) {
     this.H1 = con.find('H1');
     this.Canvas = con.find('CANVAS');
 
-    this.Voix = new Jsonic.Voix(undefined, undefined, true);
+    if (!ICache.get('ATX_VOIX')) {
+        ICache.set('ATX_VOIX', new Jsonic.Voix());
+    }
+    this.Voix = ICache.get('ATX_VOIX');
 
     this.Lock = false;
     this.IsOn = false;
@@ -13828,7 +13839,12 @@ Siri.prototype = {
     },
     initWave: function initWave() {
         var me = this,
-            audioContext = new AudioContext();
+            audioContext;
+
+        if (!ICache.get('ATX_SIRI')) {
+            ICache.set('ATX_SIRI', new AudioContext());
+        }
+        audioContext = ICache.get('ATX_SIRI');
 
         me.Painter = new Jsonic.Painter();
 
@@ -13889,7 +13905,9 @@ exports.default = {
     methods: {
         init: function init() {
             if (!this.Inited) {
+
                 this.Voice = new Siri($('#con_siri'));
+
                 this.Inited = true;
             }
         }

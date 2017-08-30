@@ -21,7 +21,10 @@ var Siri = function(con){
     this.H1 = con.find('H1');
     this.Canvas = con.find('CANVAS');
 
-    this.Voix = new Jsonic.Voix(undefined,undefined,true);
+    if(!ICache.get('ATX_VOIX')){
+        ICache.set('ATX_VOIX',new Jsonic.Voix());
+    }
+    this.Voix  = ICache.get('ATX_VOIX');
 
     this.Lock = false;
     this.IsOn = false;
@@ -98,7 +101,13 @@ Siri.prototype={
     },
     initWave:function(){
         var me = this,
-            audioContext = new AudioContext();
+            audioContext;
+
+        if(!ICache.get('ATX_SIRI')){
+            ICache.set('ATX_SIRI',new AudioContext());
+        }
+        audioContext = ICache.get('ATX_SIRI');
+
 
         me.Painter = new Jsonic.Painter();
 
@@ -147,6 +156,7 @@ Siri.prototype={
     }
 };
 
+
 export default {
     data() {
         //var id = this.$route.params.id;
@@ -156,14 +166,16 @@ export default {
     },
     beforeRouteLeave:function(to, from, next){
         if(!window.IsMobile){
-            this.Voice.stop();              
+            this.Voice.stop(); 
         }
         next(); 
     },
     methods:{
         init:function(){
             if(!this.Inited){
+
                 this.Voice = new Siri($('#con_siri'));
+                
                 this.Inited = true;
             }
         }

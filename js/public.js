@@ -1,7 +1,8 @@
 (function(){
 
     window.IsMobile = /mobile/i.test(navigator.userAgent);
-
+    var WIN = $(window),
+        BODY;
 	var CONNECTCENTER,
 		MESSAGE;
 
@@ -55,6 +56,11 @@
 		success:function(){
 			if(!MESSAGE){
 				MESSAGE = new Message();
+                if(window.IsMobile){
+                    new RemotePoint();
+                }else{
+                    new Movement();
+                }                
 				window.FBMESSAGE = MESSAGE;
 			}
 		}
@@ -73,7 +79,9 @@
 				strDBCurrent = strDB +'current';
 
 			this.DBCurrent = firebase.database().ref(strDBCurrent);
-
+            this.DBMove = firebase.database().ref(strDB+'pointStatus');
+            this.DBISMove = firebase.database().ref(strDB+'pointIsMoving');
+            this.DBFAKE = firebase.database().ref(strDB+'fake');
 			/*
 			this.DBCurrent.once('value').then(function(snapshot){
 				var _val = snapshot.val();
@@ -113,8 +121,137 @@
 	};
 
   	// Initialize Firebase
+    var RemotePoint = function(){
+        this.DeviceIcon = $('#deviceIcon');
+        this.ReflashTime = 100;
+        this.init();
+    };
+    RemotePoint.prototype={
+        init:function(){
+            var me = this,
+                allData= [],
+                mData = {},
+                clock,
+                postData = function(e){
+                    allData.push(mData);
+                    //console.log(allData.slice(-3));
+                    MESSAGE.DBMove.set(allData.slice(-3));
+                },
+                motionHandler = function(e) {
+                    var acc = e.acceleration;
+                    mData.accX = acc.x || 0;
+                    mData.accY = acc.y || 0;
+                    mData.accZ = acc.z || 0;
+                },
+                orientationHandler = function(e){
+                    mData.alpha = e.alpha || 0;
+                    mData.beta = e.beta || 0;
+                    mData.gamma = e.gamma || 0;
+                };
 
-var WIN = $(window);
+            //removeEventListener
+            //
+
+            this.DeviceIcon.bind('touchstart',function(e) {
+                allData= [];
+                me.DeviceIcon.addClass('deviceIconOn');
+                MESSAGE.DBISMove.set(1);
+                window.addEventListener('devicemotion',motionHandler);
+                window.addEventListener('deviceorientation',orientationHandler);
+                clock = setInterval(postData,me.ReflashTime);
+            }); 
+
+            this.DeviceIcon.bind('touchend',function(e) {
+                me.DeviceIcon.removeClass('deviceIconOn');
+                MESSAGE.DBISMove.set(0);  
+                window.removeEventListener('devicemotion',motionHandler);
+                window.removeEventListener('deviceorientation',orientationHandler);
+                clearInterval(clock);
+            }); 
+        }
+    };
+
+var Movement = function(){
+        //MOVEPOINT
+        this.BODY = $('#app');
+        this.MOVEPOINT =$('#movepoint');
+
+        this.IsMove =false;
+        this.init();
+    };
+    Movement.prototype={
+        setBaseXY:function(){
+            this.BaseX = this.BODY.width()/2>>0;
+            this.BaseY = this.BODY.height()/2>>0;
+        },
+        init:function(){
+            var me = this;
+
+            this.setBaseXY();
+
+            WIN.bind('resize',function(){
+                me.setBaseXY();
+            });
+
+            MESSAGE.DBISMove.on('value',function(snapshot) {https://teamspace.cisco.com/myso/snapshot
+                var _val= snapshot.val();
+                if(_val==1){
+                    me.startMove();
+                }else{
+                    me.endMove();
+                }
+            });
+
+            MESSAGE.DBMove.on('value',function(snapshot){
+                me.onMove(snapshot.val());
+            });
+        },
+        onMove:function(list){
+            if(this.IsMove && list){
+
+                var l = list.length;
+
+                if(l>0){
+                    var event = list[l-1],
+                        ax = event.accX,
+                        ay = event.accY,
+                        mx = event.alpha,
+                        my = event.beta;
+
+                    this.PointX = this.BaseX+ this.getMoveX(mx); 
+                    this.PointY = this.BaseY+ this.getMoveY(my); 
+
+                    this.MOVEPOINT.css('top',this.PointY+'px').css('left',this.PointX+'px');                 
+                }
+
+                //console.log(list);                
+            }
+        },
+        getMoveX:function(pos){
+            var _val;
+            if(pos>250){
+                _val=  pos-360;
+            }else{
+                _val = pos;
+            }
+            return -_val*10>>0;
+        },
+        getMoveY:function(pos){
+            return -pos*10>>0;
+        },
+        startMove:function(){
+            this.MOVEPOINT.css('display','');
+            this.PointX = this.BaseX;
+            this.PointY = this.BaseY;
+            this.IsMove = true;
+        },
+        endMove:function(){
+            this.MOVEPOINT.css('display','none');
+            this.IsMove = false;
+        }
+    };
+
+
 var Nav = function(routeData){
     this.Con = $('#con_nav');
     this.BtnFold = this.Con.find('.flex_1');
@@ -149,7 +286,7 @@ Nav.prototype = {
     _initSync:function(){
     	var me = this;
         
-        if(!/mobile/i.test(navigator.userAgent)){
+        if(!window.IsMobile){
             MESSAGE.update(0);
         }
         
@@ -430,7 +567,12 @@ var Melody = function(){
     this.W = this.Con.width();//840
     this.H = this.Con.height();
 
-    this.Player = new Jsonic.Melody.Track();
+    //this.Player = new Jsonic.Melody.Track();
+
+    if(!ICache.get('ATX_MELODY')){
+        ICache.set('ATX_MELODY',new Jsonic.Melody.Track());
+    }
+    this.Player = ICache.get('ATX_MELODY');
 
     this.Group =[];
 
@@ -442,10 +584,11 @@ var Melody = function(){
 Melody.prototype={
     prepareMelody:function(){
         var m = new Jsonic.Melody.MusicScore('G#','major','4/4');
-        m.w(N(7,1/16,1),N(1,1/16,2),N(3,1/16,1),N(7,1/8,1),N(1,1/8,2,true),N(7,1/16,1),N(1,1/16,2),N(3,1/16,1),N(1,1/8,2),N(7,1/8,1),N(2,1/16,2));
-        m.w(N(6,1/16,1),N(7,1/16,1),N(2,1/16,1),N(6,1/8,1),N(7,1/8,1),N(2,1/16,1),N(5,1/4,1),N(4,1/4,1));
-        m.w(N(7,1/16,1),N(1,1/16,2),N(3,1/16,1),N(7,1/8,1),N(1,1/8,2,true),N(1,1/16,2),N(7,1/16,1),N(3,1/16,1),N(1,1/8,2),N(7,1/8,1),N(2,1/16,2));
-        m.w(N(6,1/16,1),N(7,1/16,1),N(2,1/16,1),N(6,1/8,1),N(7,1/8,1),N(2,1/16,1),N(5,1/4,1),N('4#',1/8,1,true),N('3',1/16));
+        //m.w(N(7,1/16,1),N(1,1/16,2),N(3,1/16,1),N(7,1/8,1),N(1,1/8,2,true),N(7,1/16,1),N(1,1/16,2),N(3,1/16,1),N(1,1/8,2),N(7,1/8,1),N(2,1/16,2));
+        //m.w(N(6,1/16,1),N(7,1/16,1),N(2,1/16,1),N(6,1/8,1),N(7,1/8,1),N(2,1/16,1),N(5,1/4,1),N(4,1/4,1));
+        //m.w(N(7,1/16,1),N(1,1/16,2),N(3,1/16,1),N(7,1/8,1),N(1,1/8,2,true),N(1,1/16,2),N(7,1/16,1),N(3,1/16,1),N(1,1/8,2),N(7,1/8,1),N(2,1/16,2));
+        //m.w(N(6,1/16,1),N(7,1/16,1),N(2,1/16,1),N(6,1/8,1),N(7,1/8,1),N(2,1/16,1),N(5,1/4,1),N('4#',1/8,1,true),N('3',1/16));
+        m.w(N('3',1/16));
         //start with 3
         m.w(N(3,1/8),N(3,1/8),N(3,1/8),N(3,1/16),N(3,1/16),N(3,1/16),N(2,1/16),N(1,1/16),N(1,1/8,0,true),N(1,1/16),N(2,1/16));
         m.w(N(2,1/16),N(2,1/4),N(1,1/16),N(7,1/16,-1),N(6,1/16,-1),N(6,1/4,-1),N(0,1/8,0,true),N(3,1/16));
@@ -636,6 +779,8 @@ UltrasoundSender.prototype={
                     me.Btn.attr('disabled','false');
                     me.Lock =false;
                 });
+                //
+                MESSAGE.DBFAKE.set(val);
             }
         });
         me.Ipt.bind('keyup',function(e){
@@ -646,7 +791,11 @@ UltrasoundSender.prototype={
 
 var UltrasoundSenderAccept = function(){
     this.Canvas = $('#cvs_utlrasound');
-    this.AudioContext = new AudioContext();
+    if(!ICache.get('ATX_ULTRASOUND')){
+        ICache.set('ATX_ULTRASOUND',new AudioContext());
+    }
+    this.AudioContext  = ICache.get('ATX_ULTRASOUND');
+
     this.H1 = $('#con_ultrasound_msg');
     this.Band = new Jsonic.Band(this.AudioContext);
     this.Band.initDefaultChannel();
@@ -658,7 +807,12 @@ UltrasoundSenderAccept.prototype = {
         var me = this;
         this.initCanvas();
         this.Band.onMsg=function(data){
-            me.H1.html(data);
+            //me.H1.html(data);
+            console.log(data);
+            MESSAGE.DBFAKE.once('value').then(function(snapshot) {
+                me.H1.html(snapshot.val() || data);
+              // ...
+            });
             //me..innerHTML='Get the string: '+data;
         };
         this.Band.onStartReceive=function(){
@@ -749,7 +903,11 @@ Sonic.prototype={
 };
 
 var SoundSpace= function(){
-    this.Ctx = new AudioContext();
+
+    if(!ICache.get('ATX_SPACE')){
+        ICache.set('ATX_SPACE',new AudioContext());
+    }
+    this.Ctx  = ICache.get('ATX_SPACE');
     this.Audio = document.getElementById('LetItGo');
     this.IsPlay =false;
     this.init();
@@ -759,7 +917,7 @@ SoundSpace.prototype={
         var sourceNode = this.Ctx.createMediaElementSource(this.Audio);
         this.Panner = this.Ctx.createPanner();
         this.Panner.refDistance = 1;
-        this.Panner.maxDistance = 1000;
+        this.Panner.maxDistance = 100;
         this.Panner.setOrientation(0,0,0,0,1,0);
         this.Panner.setPosition(0,0,0);
         sourceNode.connect(this.Panner);
@@ -786,6 +944,19 @@ SoundSpace.prototype={
     }
 };
 
+var InstanceCache = new function(){
+
+    var _data = {};
+
+    this.set=function(k,v){
+        _data[k]=v;
+    };
+
+    this.get= function(k){
+        return _data[k];
+    };
+};
+
 //window.CONNECTCENTER = new ConnectCenter();
 window.ConnectCenter = new ConnectCenter();
 window.MNav = Nav;
@@ -793,6 +964,8 @@ window.MMelody = Melody;
 window.MSonic = Sonic;
 window.UltrasoundSender = UltrasoundSender;
 window.SoundSpace = SoundSpace;
+
+window.ICache = InstanceCache;
 
 })();
 

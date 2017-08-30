@@ -40,6 +40,7 @@ const router = new VueRouter({
 
 window.Router = router;
 
+
 var vm = new Vue({
   	//el: '#app',
     data:function(){
@@ -78,6 +79,7 @@ var vm = new Vue({
 });  
 
 window.onload = function() {
+
 	vm.$mount('#app');
 	router.push('/rockUp');
 };

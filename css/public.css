@@ -9,13 +9,13 @@ ul{list-style: none;}
     #39004B 35%,
     #9019C2 75%,
     #22005F 100%);}
-/*
+
 .con_warp{background: linear-gradient(135deg,
     #002D5C 0%,
     #057A9C 35%,
     #08C0C0 75%,
     #035F83 100%);}
-*/
+
 
 .con{width: 100%;height: 100%; overflow: hidden; position: absolute; top: 0px; left: 0px;}
 

@@ -21,7 +21,7 @@
 
 <script>
 var Space = function(){
-    this.Sound = this.SoundSpace = new SoundSpace();
+    this.Sound  = new SoundSpace();
 
     this.Con = $('#con_space');
     this.Icons = this.Con.find('I');
@@ -77,7 +77,8 @@ Space.prototype={
             cy= h/2>>0,
             r = this.RTableR+10+sw/2;
 
-        var _x,_y;
+        var _x,_y,
+            current=null;
 
         for(i=0;i<l;i++){
             locs[i].push({
@@ -89,6 +90,11 @@ Space.prototype={
                     if(me.State===2){
                         me.Sound.position((locs[i][2].x-500)/10>>0,(300-locs[i][2].y)/10>>0,0);
                         me.Sound.play();
+                        if(current!=null){
+                            me.JIcons[current].css('transform','scale(1)');
+                        }
+                        current = i;
+                        me.JIcons[i].css('transform','scale(1.2)');
                     }
                     e.stopPropagation();
                 });
@@ -191,7 +197,7 @@ export default {
     },
     beforeRouteLeave:function(to, from, next){
         if(!window.IsMobile){
-            this.Space.SoundSpace.clear();               
+            this.Space.Sound.clear();               
         }
         next(); 
     },

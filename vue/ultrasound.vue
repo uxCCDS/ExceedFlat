@@ -10,6 +10,11 @@
         <div class='con con_mobile con_ultrasound_mobile' id='con_ultrasound_mobile'>
             <input id='ultrasoundIpt' type="text" />
             <a>Send</a>
+            <p>I've talked all! But that's not all. Geek not stop exploring the world. I tried to make more possibility  for our prototype.</p>
+            <p>Look this! This line shows the frequency range of the sound that the computer can send. From 0 - 22050</p>
+            <p>Our 440hz 'LA' is at the very begining of the line. And you can see the frequency of guitar, piano and singer.</p>
+            <p>When you the frequency of sound is over 20000, it becomes ultrasound. People can not listen to it.</p>
+            <p>Let's listen to the environment here.</p>
         </div>
     </div>
 </template>

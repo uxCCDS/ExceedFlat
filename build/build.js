@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 15);
+/******/ 	return __webpack_require__(__webpack_require__.s = 16);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -360,13 +360,13 @@ process.umask = function() { return 0; };
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(27)
+  __webpack_require__(29)
 }
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(16),
+  __webpack_require__(17),
   /* template */
-  __webpack_require__(38),
+  __webpack_require__(41),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -404,13 +404,13 @@ module.exports = Component.exports
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(33)
+  __webpack_require__(36)
 }
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(17),
+  __webpack_require__(18),
   /* template */
-  __webpack_require__(44),
+  __webpack_require__(48),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -448,13 +448,57 @@ module.exports = Component.exports
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(31)
+  __webpack_require__(30)
 }
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(18),
+  __webpack_require__(19),
   /* template */
   __webpack_require__(42),
+  /* styles */
+  injectStyle,
+  /* scopeId */
+  "data-v-2769003e",
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/Applications/XAMPP/xamppfiles/htdocs/github/ExceedFlat/vue/end.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] end.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-2769003e", Component.options)
+  } else {
+    hotAPI.reload("data-v-2769003e", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(34)
+}
+var Component = __webpack_require__(0)(
+  /* script */
+  __webpack_require__(20),
+  /* template */
+  __webpack_require__(46),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -486,19 +530,19 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(34)
+  __webpack_require__(37)
 }
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(19),
+  __webpack_require__(21),
   /* template */
-  __webpack_require__(45),
+  __webpack_require__(49),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -530,19 +574,19 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(29)
+  __webpack_require__(32)
 }
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(20),
+  __webpack_require__(22),
   /* template */
-  __webpack_require__(40),
+  __webpack_require__(44),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -574,19 +618,19 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(35)
+  __webpack_require__(38)
 }
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(21),
+  __webpack_require__(23),
   /* template */
-  __webpack_require__(46),
+  __webpack_require__(50),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -618,19 +662,19 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(28)
+  __webpack_require__(31)
 }
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(22),
+  __webpack_require__(24),
   /* template */
-  __webpack_require__(39),
+  __webpack_require__(43),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -662,19 +706,19 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(30)
+  __webpack_require__(33)
 }
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(23),
+  __webpack_require__(25),
   /* template */
-  __webpack_require__(41),
+  __webpack_require__(45),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -706,19 +750,19 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(37)
+  __webpack_require__(40)
 }
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(24),
+  __webpack_require__(26),
   /* template */
-  __webpack_require__(48),
+  __webpack_require__(52),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -750,19 +794,19 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(32)
+  __webpack_require__(35)
 }
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(25),
+  __webpack_require__(27),
   /* template */
-  __webpack_require__(43),
+  __webpack_require__(47),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -794,19 +838,19 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(36)
+  __webpack_require__(39)
 }
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(26),
+  __webpack_require__(28),
   /* template */
-  __webpack_require__(47),
+  __webpack_require__(51),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -838,7 +882,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3352,7 +3396,7 @@ if (inBrowser && window.Vue) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13047,40 +13091,44 @@ Vue$3.compile = compileToFunctions;
 
 /* harmony default export */ __webpack_exports__["default"] = (Vue$3);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1), __webpack_require__(49)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1), __webpack_require__(53)))
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _vue = __webpack_require__(14);
+var _vue = __webpack_require__(15);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _vueRouter = __webpack_require__(13);
+var _vueRouter = __webpack_require__(14);
 
 var _vueRouter2 = _interopRequireDefault(_vueRouter);
 
-var _navTool = __webpack_require__(7);
+var _navTool = __webpack_require__(8);
 
 var _navTool2 = _interopRequireDefault(_navTool);
+
+var _end = __webpack_require__(4);
+
+var _end2 = _interopRequireDefault(_end);
 
 var _black = __webpack_require__(2);
 
 var _black2 = _interopRequireDefault(_black);
 
-var _rockUp = __webpack_require__(8);
+var _rockUp = __webpack_require__(9);
 
 var _rockUp2 = _interopRequireDefault(_rockUp);
 
-var _speechRecognition = __webpack_require__(10);
+var _speechRecognition = __webpack_require__(11);
 
 var _speechRecognition2 = _interopRequireDefault(_speechRecognition);
 
-var _speechRecognitionThinking = __webpack_require__(11);
+var _speechRecognitionThinking = __webpack_require__(12);
 
 var _speechRecognitionThinking2 = _interopRequireDefault(_speechRecognitionThinking);
 
@@ -13088,23 +13136,23 @@ var _decorateSound = __webpack_require__(3);
 
 var _decorateSound2 = _interopRequireDefault(_decorateSound);
 
-var _guitarSpeakers = __webpack_require__(5);
+var _guitarSpeakers = __webpack_require__(6);
 
 var _guitarSpeakers2 = _interopRequireDefault(_guitarSpeakers);
 
-var _soundInSpace = __webpack_require__(9);
+var _soundInSpace = __webpack_require__(10);
 
 var _soundInSpace2 = _interopRequireDefault(_soundInSpace);
 
-var _essence = __webpack_require__(4);
+var _essence = __webpack_require__(5);
 
 var _essence2 = _interopRequireDefault(_essence);
 
-var _melody = __webpack_require__(6);
+var _melody = __webpack_require__(7);
 
 var _melody2 = _interopRequireDefault(_melody);
 
-var _ultrasound = __webpack_require__(12);
+var _ultrasound = __webpack_require__(13);
 
 var _ultrasound2 = _interopRequireDefault(_ultrasound);
 
@@ -13135,6 +13183,8 @@ var router = new _vueRouter2.default({
         path: '/melody', component: _melody2.default
     }, {
         path: '/ultrasound', component: _ultrasound2.default
+    }, {
+        path: '/end', component: _end2.default
     }]
 });
 
@@ -13184,53 +13234,6 @@ window.onload = function () {
 };
 
 /***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-exports.default = {
-    data: function data() {
-        //var id = this.$route.params.id;
-        return {};
-    },
-
-    methods: {
-        init: function init() {}
-    },
-    computed: {},
-    mounted: function mounted() {
-        this.init();
-        //this.initAsh();
-        //console.log(this.$el);
-    }
-};
-
-/***/ }),
 /* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -13240,6 +13243,11 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+//
+//
+//
+//
+//
 //
 //
 //
@@ -13295,6 +13303,11 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 exports.default = {
@@ -13324,6 +13337,8 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+//
+//
 //
 //
 //
@@ -13377,6 +13392,103 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+
+
+exports.default = {
+    data: function data() {
+        //var id = this.$route.params.id;
+        return {};
+    },
+
+    methods: {
+        init: function init() {}
+    },
+    computed: {},
+    mounted: function mounted() {
+        this.init();
+        //this.initAsh();
+        //console.log(this.$el);
+    }
+};
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+exports.default = {
+    data: function data() {
+        //var id = this.$route.params.id;
+        return {};
+    },
+
+    methods: {
+        init: function init() {}
+    },
+    computed: {},
+    mounted: function mounted() {
+        this.init();
+        //this.initAsh();
+        //console.log(this.$el);
+    }
+};
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 exports.default = {
@@ -13410,7 +13522,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 21 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13469,7 +13581,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 22 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13478,6 +13590,10 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+//
+//
+//
+//
 //
 //
 //
@@ -13593,7 +13709,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 23 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13602,6 +13718,12 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -13824,7 +13946,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 24 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13833,6 +13955,10 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+//
+//
+//
+//
 //
 //
 //
@@ -14021,7 +14147,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 25 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14030,6 +14156,11 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+//
+//
+//
+//
+//
 //
 //
 //
@@ -14065,7 +14196,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 26 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14074,6 +14205,11 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+//
+//
+//
+//
+//
 //
 //
 //
@@ -14126,18 +14262,6 @@ exports.default = {
         //console.log(this.$el);
     }
 };
-
-/***/ }),
-/* 27 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 28 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 29 */
@@ -14195,6 +14319,24 @@ exports.default = {
 
 /***/ }),
 /* 38 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -14206,7 +14348,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "con con_hd black"
   }), _vm._v(" "), _c('div', {
     staticClass: "con con_mobile"
-  }, [_c('p', [_vm._v("Hello every one, good morning, My Name is Arhtus! Firstly, let's applaud for Fiona's Speech again. She did real good job.\nThrough her speech, I believe you have a general understanding on the research done by the prototype team.\n")]), _vm._v(" "), _c('p', [_vm._v("As we all know, the technology is complex. We make it easier for user , and I make you better understanding.")]), _vm._v(" "), _c('p', [_vm._v("I prepared an interesting topic for you , this morning!")]), _vm._v(" "), _c('p', [_vm._v("It's my first time to Oslo. When I searched this area in Google map, I found some club and music hall!!")]), _vm._v(" "), _c('p', [_vm._v("HM! I think it's a right place for my topic!")]), _vm._v(" "), _c('p', [_vm._v("Rock up! The Interaction of sound.")])])])
+  }, [_c('p', [_vm._v("Hello every one, good morning, My Name is Arhtus! Firstly, let's applaud for Fiona's Speech again. She did real good job.\nThrough her speech, I believe you have a general understanding on the research done by the prototype team.\n")]), _vm._v(" "), _c('p', [_vm._v("As we all know, the technology is complex. We make it easier for user , and prototype team make you better understanding.")]), _vm._v(" "), _c('p', [_vm._v("It's my first time to Oslo and I prepared an interesting topic for you , this morning!")]), _vm._v(" "), _c('p', [_vm._v("When I searched this area in Google map, I found some clubs and music hall!!")]), _vm._v(" "), _c('p', [_vm._v("HM! I think it's a right place for my topic!")]), _vm._v(" "), _c('p', [_vm._v("Rock up! The Interaction of sound.")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -14217,7 +14359,32 @@ if (false) {
 }
 
 /***/ }),
-/* 39 */
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "con"
+  }, [_c('div', {
+    staticClass: "con con_hd black"
+  }, [_c('div', {
+    staticClass: "text_title center"
+  }, [_c('h1', [_vm._v("uxccds.github.io")])])]), _vm._v(" "), _c('div', {
+    staticClass: "con con_mobile"
+  }, [_c('p', [_vm._v("prototype site")])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-2769003e", module.exports)
+  }
+}
+
+/***/ }),
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -14249,7 +14416,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "con con_mobile"
-  }, [_c('p', [_vm._v("Thanks for Fiona to introduce the latest technology to us. It helps us to open the door of future.")])])
+  }, [_c('p', [_vm._v("We do pay attention to the animation. Let's see is again!")]), _vm._v(" "), _c('p', [_vm._v("OH, Are you familiar with this ring?")]), _vm._v(" "), _c('p', [_vm._v("Nokia is not yesterday's Nokia, but the good memory is still buried in our heart.")]), _vm._v(" "), _c('p', [_vm._v("What's the fisrt app come to your mind which is lated to sound?")]), _vm._v(" "), _c('p', [_vm._v("Music App? Record App? Hey, it's a talk from prototype team. Let's think of something rated to the high technology?")])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -14260,7 +14427,7 @@ if (false) {
 }
 
 /***/ }),
-/* 40 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -14284,7 +14451,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_vm._v("A# = A * 2 ^ 1/12")])])]), _vm._v(" "), _c('div', {
     staticClass: "con con_mobile"
-  }, [_c('p', [_vm._v("Rock Up?")])])])
+  }, [_c('p', [_vm._v("So! What's this?! Musical alphabet")]), _vm._v(" "), _c('p', [_vm._v("Software engineers are thinking with 1 and 0 to build their utopia while musicians play with music notes to construct their Garden of Eden.")]), _vm._v(" "), _c('p', [_vm._v("The morden music is base on a famous temperament. Twelve-tone equal temperament!!!")]), _vm._v(" "), _c('p', [_vm._v("As we all know, sound wave is a kind of mechanical wave. Wave has its own frequency.")]), _vm._v(" "), _c('p', [_vm._v("According to twelve-tone equal temperament, 440 hz is the frequency of 'LA'. And we have a formula to get the frequency of the other note.")]), _vm._v(" "), _c('p', [_vm._v("Luckily, the browser enanbles us to create an Oscillator node to create a sound at any frequency the device can send.")]), _vm._v(" "), _c('p', [_vm._v("Guess what we can do!")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -14295,7 +14462,7 @@ if (false) {
 }
 
 /***/ }),
-/* 41 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -14359,7 +14526,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   })])]), _vm._v(" "), _c('div', {
     staticClass: "con con_mobile"
-  }, [_c('p', [_vm._v("Sound spread in space.")])])])
+  }, [_c('p', [_vm._v("What do you see?  A man ? Yes")]), _vm._v(" "), _c('p', [_vm._v("And now? Some people. This is like the current spark meeting. The active speaker is also in the center. All the people hear the same voice.")]), _vm._v(" "), _c('p', [_vm._v("OK! Let's try to do some changes! Now it is more like a round table meeting. ")]), _vm._v(" "), _c('p', [_vm._v("Do you remeber the 360 camera and VR ?  You will have a 360 view! And the most important thing here is that different people should here different sound in different position.")]), _vm._v(" "), _c('p', [_vm._v("Try to enjoy the music! I am going to change to position of the sound source.")]), _vm._v(" "), _c('p', [_vm._v("Can you feel the sound come from right to left and front to back?!")]), _vm._v(" "), _c('p', [_vm._v("Sorry for disturbing you to enjoy music ! But, do you feel more curious about sound?")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -14370,7 +14537,7 @@ if (false) {
 }
 
 /***/ }),
-/* 42 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -14384,7 +14551,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "text_title center"
   }, [_c('h1', [_vm._v("Essence")])])]), _vm._v(" "), _c('div', {
     staticClass: "con con_mobile"
-  }, [_c('p', [_vm._v("Have you ever thought the essense behind these technology?")])])])
+  }, [_c('p', [_vm._v("HM! Let me show you the essence of sound to you ?")]), _vm._v(" "), _c('p', [_vm._v("Fisrt, I'd like to talk something about Music theory. I know people from design team never lack of sense of Art.")]), _vm._v(" "), _c('p', [_vm._v("I believe you can recognize what I show you in the next page.")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -14395,7 +14562,7 @@ if (false) {
 }
 
 /***/ }),
-/* 43 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -14413,7 +14580,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "s3"
   }, [_vm._v("Action")])]), _vm._v(" "), _c('div', {
     staticClass: "con con_mobile"
-  }, [_c('p', [_vm._v("What's the thinking of speech recognition?")])])])
+  }, [_c('p', [_vm._v("Here is a summary for speech recognition.")]), _vm._v(" "), _c('p', [_vm._v("-Voice-Text-Action")]), _vm._v(" "), _c('p', [_vm._v("At first, we start to listen to the environment and get sound data. Then the cloud server will convert the sound to text. Thanks to big data, it's more accurate now! Finally we can program with the text just like the normal input from keyboard.")]), _vm._v(" "), _c('p', [_vm._v("Remember it! ")]), _vm._v(" "), _c('p', [_vm._v("This is the speech recognition. Differnet actions create different apps. Reading voice mail, translate different languages and so on.")]), _vm._v(" "), _c('p', [_vm._v("I also tried to use this in the app on the car.")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -14424,7 +14591,7 @@ if (false) {
 }
 
 /***/ }),
-/* 44 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -14438,7 +14605,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "text_title center"
   }, [_c('h1', [_vm._v("Decorate Sound")])])]), _vm._v(" "), _c('div', {
     staticClass: "con con_mobile"
-  }, [_c('p', [_vm._v("I believe you guys here are artists. ")])])])
+  }, [_c('p', [_vm._v("Ofcourse, we can not only analysis sound, but also decorate sound!")]), _vm._v(" "), _c('p', [_vm._v("We listen to the music! ")]), _vm._v(" "), _c('p', [_vm._v("Everybody like beatuiful things. I know amap App even invite a super model in China to record the voice packets.")]), _vm._v(" "), _c('p', [_vm._v("I will tell you that you can PS sound just like you PS photo.")]), _vm._v(" "), _c('p', [_vm._v("Before diving in this part, I'd like share my own experience.")]), _vm._v(" "), _c('p', [_vm._v("It was happened that I bought an eletric guitar when I started to learn Web Audio API.  The board of the guitar speaker and the web audio api are amazing similar. The knowledge accross field really helps engineering a lot!!!")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -14449,7 +14616,7 @@ if (false) {
 }
 
 /***/ }),
-/* 45 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -14463,7 +14630,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "center img_speaker"
   })]), _vm._v(" "), _c('div', {
     staticClass: "con con_mobile"
-  }, [_c('p', [_vm._v("I believe you guys here are artists. ")])])])
+  }, [_c('p', [_vm._v("Here is an image of guitar speaker.")]), _vm._v(" "), _c('p', [_vm._v("You can see some Knobs on this speakers. ")]), _vm._v(" "), _c('p', [_vm._v("The GAIN Knob and the Volumes Knob can adjust the volume.")]), _vm._v(" "), _c('p', [_vm._v("The Delay Knob can make the music play few seconds later.")]), _vm._v(" "), _c('p', [_vm._v("Reverb is very popular! I think most of people like use reverb when they single karaoke.")]), _vm._v(" "), _c('p', [_vm._v("The other Knobs offers some speical effect for guitar. Like Riffer ,Metal...")]), _vm._v(" "), _c('p', [_vm._v("I can also find some similar interface to code according to the web audio api.")]), _vm._v(" "), _c('p', [_vm._v("Just like filter for photoshop! And you can even ask for more! Because music exist in the time and space.")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -14474,7 +14641,7 @@ if (false) {
 }
 
 /***/ }),
-/* 46 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -14516,7 +14683,7 @@ if (false) {
 }
 
 /***/ }),
-/* 47 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -14557,7 +14724,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "id": "ultrasoundIpt",
       "type": "text"
     }
-  }), _vm._v(" "), _c('a', [_vm._v("Send")])])])
+  }), _vm._v(" "), _c('a', [_vm._v("Send")]), _vm._v(" "), _c('p', [_vm._v("I've talked all! But that's not all. Geek not stop exploring the world. I tried to make more possibility  for our prototype.")]), _vm._v(" "), _c('p', [_vm._v("Look this! This line shows the frequency range of the sound that the computer can send. From 0 - 22050")]), _vm._v(" "), _c('p', [_vm._v("Our 440hz 'LA' is at the very begining of the line. And you can see the frequency of guitar, piano and singer.")]), _vm._v(" "), _c('p', [_vm._v("When you the frequency of sound is over 20000, it becomes ultrasound. People can not listen to it.")]), _vm._v(" "), _c('p', [_vm._v("Let's listen to the environment here.")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -14568,7 +14735,7 @@ if (false) {
 }
 
 /***/ }),
-/* 48 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -14599,7 +14766,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   })])]), _vm._v(" "), _c('div', {
     staticClass: "con con_mobile"
-  }, [_c('p', [_vm._v("What's fisrt App come to your mind after you hear speech recognition?")])])])
+  }, [_c('p', [_vm._v("Yes! Siri! I heard it!Steven Jobs brought it to the world in 2011 with IPhone 4S.From them on, the world started to pay more attention to the speech recognition area.")]), _vm._v(" "), _c('p', [_vm._v("And, we!! has already tried to add this technology to our prototype some times.")]), _vm._v(" "), _c('p', [_vm._v("I still remember that it's the first project in Cisco. It's a prototype for windows phone 8. Taya encouraged me to add something new outside the normal interaction.Then I touched face decetion and wrote a javascript library for speech recognition. It's so lucky for me to work with the talent people here.")]), _vm._v(" "), _c('p', [_vm._v("Here is a sample shows the how it works.")]), _vm._v(" "), _c('p', [_vm._v("This wave animation shows the voice's change. If the server gets my voice successfully, it will return a text. Command. ")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -14610,7 +14777,7 @@ if (false) {
 }
 
 /***/ }),
-/* 49 */
+/* 53 */
 /***/ (function(module, exports) {
 
 var g;

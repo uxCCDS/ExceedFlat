@@ -1,0 +1,228 @@
+Voice Application -> Change Voice (Properity) -> Decorate Voice -> Melody -> ultrasound! (Interesting)
+
+Hello every one, good morning, My Name is Arhtus! Firstly, let's applaud for Fiona's Speech again. She did real good job.
+Through her speech, I believe you have a general understanding on the research done by the prototype team.
+
+/*
+We get inspirations across fileds.
+We blend the lastest technology into our designs.
+We explore the new possibility.
+*/
+
+As we all know, the technology is complex. We make it easier for user , and I make you better understanding.
+
+I prepared an interesting topic for you , this morning!
+
+It's my first time to Oslo. When I searched this area in Google map, I found some club and music hall!!
+
+HM! I think it's a right place for my topic!
+
+Rock up! The Interaction of sound.
+
+
+--------------------------- rockUp ---------------------------
+
+==> Click subtitle. PLAY NOKIA 
+
+Are you familiar with this ring?
+
+Nokia is not yesterday's Nokia, but the good memory is still buried in our heart.
+
+Now! What's the fisrt app come to your mind which is lated to sound?
+
+Music App? Record App? Hey, it's a talk from prototype team. Let's think of something rated to the high technology?
+
+--------------------------- speechRecognition ---------------------------
+
+Yes! Siri! I heard it!
+
+Steven Jobs brought it to the world in 2011 with IPhone 4S.
+
+From them on, the world started to pay more attention to the speech recognition area. And, we!! has already tried to add this technology to our prototype some times.
+
+I still remember that it's the first project in Cisco. It's a prototype for windows phone 8. Taya encouraged me to add something new outside the normal interaction.
+
+Then I touched face decetion and wrote a javascript library for speech recognition. It's so lucky for me to work with the talent people here.
+
+Here is a sample shows the how it works.
+
+==> Click Icon to play
+
+After I click this icon, it starts to listen to the users. This wave animation shows the voice's change. If the server gets my voice successfully, it will return a text.
+I can bind the text to an command. Such as 'next' to the next page. 
+
+If not success ? :P
+
+--------------------------- speechRecognitionThinking ---------------------------
+
+Here is a summary for speech recognition.
+
+-Voice-Text-Action
+
+At first, we start to listen to the environment and get sound data.
+Then the cloud server will convert the sound to text. Thanks to big data, it's more accurate now!
+Finally we can program with the text just like the normal input from keyboard.
+
+Remember it! 
+
+...
+
+This is the speech recognition. Differnet actions create different apps. Reading voice mail, translate different languages and so on.
+
+--------------------------- decorate Sound ---------------------------
+
+Ofcourse, we can not only analysis sound, but also decorate sound!
+
+We listen to the music! 
+
+Everybody like beatuiful things. 
+
+I know amap App even invite a super model in China to record the voice packets.
+
+: Story
+
+And we can PS sound just like you PS photo.
+
+
+Before diving in this part, I'd like share my own experience.
+It was happened that I bought an eletric guitar when I started to learn Web Audio API.  The board of the guitar speaker and the web audio api are amazing similar.
+The knowledge accross field really helps engineering a lot!!!
+
+
+--------------------------- guitarSpeakers ---------------------------
+
+Here is an image of guitar speaker.
+
+You can see some Knobs on this speakers. 
+
+The GAIN Knob and the Volumes can adjust the volume.
+
+The Delay node can make the music play few seconds later.
+
+The reverb node is very popular! I think most of people like use reverb when they single karaoke.
+
+The other nodes offers some speical effect for guitar. Like Riffer ,Metal...
+
+I can also find some similar interface to code according to the web audio api.
+
+Just like filter for photoshop!
+
+--------------------------- soundInSpace ---------------------------
+
+And you can even ask for more!
+
+Because music exist in the time and space.
+
+What do you see?  A man ? Yes
+
+And now? Some people. This is like the current spark meeting. The active speaker is also in the center. All the people hear the same voice.
+
+OK! Let's try to do some changes! Now it is more like a round table meeting. 
+
+Do you remeber the 360 camera and VR ?  You will have a 360 view! And the most important thing here is that different people should here different sound in different position.
+
+Try to enjoy the music!
+
+I am going to change to position of the sound source.
+
+Can you feel the sound come from right to left and front to back?!
+
+! Sorry for disturbing you to enjoy music ! 
+
+But, do you feel more curious about sound?
+
+--------------------------- essence ---------------------------\
+
+HM! Let me show you the essence of sound to you ?
+
+Fisrt, I'd like to talk something about Music theory. I know people from design team never lack of sense of Art.
+
+I believe you can recognize what I show you in the next page.
+
+
+--------------------------- melody ---------------------------
+
+So! What's this?!
+
+musical alphabet
+
+Software engineers are thinking with 1 and 0 to build their utopia while musicians play with music notes to construct their Garden of Eden.
+
+The morden music is base on a famous temperament. 
+
+twelve-tone equal temperament!!!
+
+---> As we all know, sound wave is a kind of mechanical wave. Wave has its own frequency.
+
+According to twelve-tone equal temperament, 440 hz is the frequency of 'LA'. So the A in the previous group is 220 hz.
+
+In twelve-tone equal temperament, which divides the octave into 12 equal parts, the width of a semitone, i.e. the frequency ratio of the interval between two adjacent notes, is the twelfth root of two. So we can get the freqency of other notes refer to the following code.
+
+Till now we can get the frequency of every note! Luckily, the browser enanbles us to create an Oscillator node to create a sound at any frequency the device can send.
+
+Guess what we can do!
+
+--------------------------- ultrasound ---------------------------
+
+I've talked all! But that's not all. Geek not stop exploring the world. I tried to make more possibility  for our prototype.
+
+Look this!
+
+This line shows the frequency range of the sound that the computer can send. From 0 - 22050
+
+Our 440hz 'LA' is at the very begining of the line. 
+
+And you can see the frequency of guitar, piano and singer.
+
+
+Let's listen to the environment here.
+
+Watch the chart!
+
+When you the frequency of sound is over 20000, it becomes ultrasound. People can not listen to it.
+
+And we can use the ultrasound to transform data.
+
+Have you ever tried proxmity?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -835,7 +835,7 @@ UltrasoundSenderAccept.prototype = {
                 config:{
                     XNum:1024,
                     XGap:0,
-                    YMid:390,
+                    YMid:400,
                     FillStyle:'#ffffff'
                 }
             }});

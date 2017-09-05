@@ -8,7 +8,11 @@
             </div>
         </div>
         <div class='con con_mobile'>
-            <p>Thanks for Fiona to introduce the latest technology to us. It helps us to open the door of future.</p>
+            <p>We do pay attention to the animation. Let's see is again!</p>
+            <p>OH, Are you familiar with this ring?</p>
+            <p>Nokia is not yesterday's Nokia, but the good memory is still buried in our heart.</p>
+            <p>What's the fisrt app come to your mind which is lated to sound?</p>
+            <p>Music App? Record App? Hey, it's a talk from prototype team. Let's think of something rated to the high technology?</p>
         </div>
     </div>
 </template>

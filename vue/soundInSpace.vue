@@ -14,7 +14,13 @@
             </div>
         </div>
         <div class='con con_mobile'>
-            <p>Sound spread in space.</p>
+            <p>What do you see?  A man ? Yes</p>
+            <p>And now? Some people. This is like the current spark meeting. The active speaker is also in the center. All the people hear the same voice.</p>
+            <p>OK! Let's try to do some changes! Now it is more like a round table meeting. </p>
+            <p>Do you remeber the 360 camera and VR ?  You will have a 360 view! And the most important thing here is that different people should here different sound in different position.</p>
+            <p>Try to enjoy the music! I am going to change to position of the sound source.</p>
+            <p>Can you feel the sound come from right to left and front to back?!</p>
+            <p>Sorry for disturbing you to enjoy music ! But, do you feel more curious about sound?</p>
         </div>
     </div>
 </template>

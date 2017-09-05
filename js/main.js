@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import NavTool from '../vue/navTool.vue';
+import End from '../vue/end.vue';
 import Black from '../vue/black.vue';
 import RockUp from '../vue/rockUp.vue';
 import SpeechRecognition from '../vue/speechRecognition.vue';
@@ -38,6 +39,8 @@ const router = new VueRouter({
         path:'/melody',component: Melody
     },{
         path:'/ultrasound',component: Ultrasound
+    },{
+        path:'/end',component: End
     }]
 });
 

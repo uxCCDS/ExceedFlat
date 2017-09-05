@@ -8,7 +8,11 @@
             </div>
         </div>
         <div class='con con_mobile'>
-            <p>What's fisrt App come to your mind after you hear speech recognition?</p>
+            <p>Yes! Siri! I heard it!Steven Jobs brought it to the world in 2011 with IPhone 4S.From them on, the world started to pay more attention to the speech recognition area.</p>
+            <p>And, we!! has already tried to add this technology to our prototype some times.</p>
+            <p>I still remember that it's the first project in Cisco. It's a prototype for windows phone 8. Taya encouraged me to add something new outside the normal interaction.Then I touched face decetion and wrote a javascript library for speech recognition. It's so lucky for me to work with the talent people here.</p>
+            <p>Here is a sample shows the how it works.</p>
+            <p>This wave animation shows the voice's change. If the server gets my voice successfully, it will return a text. Command. </p>
         </div>
     </div>
 </template>

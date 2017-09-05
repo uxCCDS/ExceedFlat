@@ -1,14 +1,12 @@
 <template>
     <div class='con'>
-        <div class='con con_hd'>
+        <div class='con con_hd black'>
             <div class='text_title center'>
-                <h1>Essence</h1>              
+                <h1>uxccds.github.io</h1>              
             </div>
         </div>
         <div class='con con_mobile'>
-            <p>HM! Let me show you the essence of sound to you ?</p>
-            <p>Fisrt, I'd like to talk something about Music theory. I know people from design team never lack of sense of Art.</p>
-            <p>I believe you can recognize what I show you in the next page.</p>
+            <p>prototype site</p>
         </div>
     </div>
 </template>
@@ -39,7 +37,7 @@ export default {
 </script>
 
 <style scoped>
-
+.black{background: black;}
 </style>
 
 

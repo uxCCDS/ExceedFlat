@@ -6,7 +6,13 @@
             </div>
         </div>
         <div class='con con_mobile'>
-            <p>Rock Up?</p>
+            <p>So! What's this?! Musical alphabet</p>
+            <p>Software engineers are thinking with 1 and 0 to build their utopia while musicians play with music notes to construct their Garden of Eden.</p>
+            <p>The morden music is base on a famous temperament. Twelve-tone equal temperament!!!</p>
+            <p>As we all know, sound wave is a kind of mechanical wave. Wave has its own frequency.</p>
+            <p>According to twelve-tone equal temperament, 440 hz is the frequency of 'LA'. And we have a formula to get the frequency of the other note.</p>
+            <p>Luckily, the browser enanbles us to create an Oscillator node to create a sound at any frequency the device can send.</p>
+            <p>Guess what we can do!</p>
         </div>
     </div>
 </template>

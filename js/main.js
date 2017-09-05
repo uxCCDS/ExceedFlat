@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import NavTool from '../vue/navTool.vue';
+import Black from '../vue/black.vue';
 import RockUp from '../vue/rockUp.vue';
 import SpeechRecognition from '../vue/speechRecognition.vue';
 import SpeechRecognitionThinking from '../vue/speechRecognitionThinking.vue';
@@ -18,6 +19,8 @@ window.LOCK_ANIMATION =false;
 
 const router = new VueRouter({
   	routes:[{ 
+        path: '/black', component: Black
+    },{ 
         path: '/rockUp', component: RockUp
     },{ 
         path: '/speechRecognition', component: SpeechRecognition
@@ -81,5 +84,5 @@ var vm = new Vue({
 window.onload = function() {
 
 	vm.$mount('#app');
-	router.push('/rockUp');
+	router.push('/black');
 };

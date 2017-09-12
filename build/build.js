@@ -14371,7 +14371,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "con con_hd black"
   }, [_c('div', {
     staticClass: "text_title center"
-  }, [_c('h1', [_vm._v("uxccds.github.io")])])]), _vm._v(" "), _c('div', {
+  }, [_c('h1', [_c('a', {
+    attrs: {
+      "href": "https://uxccds.github.io"
+    }
+  }, [_vm._v("uxccds.github.io")])])])]), _vm._v(" "), _c('div', {
     staticClass: "con con_mobile"
   }, [_c('p', [_vm._v("prototype site")])])])
 }]}

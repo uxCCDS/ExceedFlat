@@ -2,7 +2,7 @@
     <div class='con'>
         <div class='con con_hd black'>
             <div class='text_title center'>
-                <h1>uxccds.github.io</h1>              
+                <h1><a href='https://uxccds.github.io'>uxccds.github.io</a></h1>              
             </div>
         </div>
         <div class='con con_mobile'>
@@ -38,6 +38,7 @@ export default {
 
 <style scoped>
 .black{background: black;}
+h1 a{text-decoration: none; font-size: 80px;}
 </style>
 
 
